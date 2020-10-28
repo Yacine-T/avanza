@@ -22,7 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acb843b5-2923-41db-bc3d-a77267ea2dec" name="Default Changelist" comment="Beginning of the Avanza project" />
+    <list default="true" id="acb843b5-2923-41db-bc3d-a77267ea2dec" name="Default Changelist" comment="Ending of directory structure Avanza project">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/MemberController.php" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,17 +36,27 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP7.4.9" />
   <component name="ProjectId" id="1jT4Zjv6HhWWUcbDEUR4USDgBIT" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../bin/php/php7.4.9/php.exe" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -85,7 +99,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603814805894</updated>
-      <workItem from="1603814807142" duration="1970000" />
+      <workItem from="1603814807142" duration="2121000" />
+      <workItem from="1603826269991" duration="236000" />
+      <workItem from="1603880030394" duration="551000" />
+      <workItem from="1603884006828" duration="18191000" />
     </task>
     <task id="LOCAL-00001" summary="Beginning of the Avanza project">
       <created>1603816568975</created>
@@ -94,7 +111,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603816568975</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Ending of directory structure Avanza project">
+      <created>1603816823654</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603816823654</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Ending of directory structure Avanza project">
+      <created>1603816918046</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1603816918046</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,47 +141,61 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Beginning of the Avanza project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Beginning of the Avanza project" />
+    <MESSAGE value="Ending of directory structure Avanza project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ending of directory structure Avanza project" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="446" y="61" key="#com.intellij.ide.util.MemberChooser" timestamp="1603816189799">
+    <state x="393" y="165" key="#Notifications" timestamp="1603826312675">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="446" y="61" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" timestamp="1603816189799" />
-    <state width="1237" height="160" key="GridCell.Tab.0.bottom" timestamp="1603816098424">
+    <state x="393" y="165" key="#Notifications/0.0.1280.689@0.0.1280.689" timestamp="1603826312675" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603909928477">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="160" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1603816098424" />
-    <state width="1237" height="160" key="GridCell.Tab.0.center" timestamp="1603816098424">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.689@0.0.1280.689" timestamp="1603909928477" />
+    <state x="446" y="61" key="#com.intellij.ide.util.MemberChooser" timestamp="1603906610826">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="160" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1603816098424" />
-    <state width="1237" height="160" key="GridCell.Tab.0.left" timestamp="1603816098424">
+    <state x="446" y="61" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" timestamp="1603906610826" />
+    <state width="1237" height="160" key="GridCell.Tab.0.bottom" timestamp="1603816944447">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="160" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1603816098424" />
-    <state width="1237" height="160" key="GridCell.Tab.0.right" timestamp="1603816098424">
+    <state width="1237" height="160" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1603816944447" />
+    <state width="1237" height="160" key="GridCell.Tab.0.center" timestamp="1603816944446">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="160" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1603816098424" />
-    <state x="465" y="52" key="NewPhpClassDialog" timestamp="1603815160458">
+    <state width="1237" height="160" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1603816944446" />
+    <state width="1237" height="160" key="GridCell.Tab.0.left" timestamp="1603816944446">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="465" y="52" key="NewPhpClassDialog/0.0.1280.689@0.0.1280.689" timestamp="1603815160458" />
-    <state x="477" y="265" key="NewPhpFileDialog" timestamp="1603815144426">
+    <state width="1237" height="160" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1603816944446" />
+    <state width="1237" height="160" key="GridCell.Tab.0.right" timestamp="1603816944446">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="477" y="265" key="NewPhpFileDialog/0.0.1280.689@0.0.1280.689" timestamp="1603815144426" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1603816076832">
+    <state width="1237" height="160" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1603816944446" />
+    <state x="465" y="52" key="NewPhpClassDialog" timestamp="1603910011081">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1603816076832" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1603816577278">
+    <state x="465" y="52" key="NewPhpClassDialog/0.0.1280.689@0.0.1280.689" timestamp="1603910011081" />
+    <state x="477" y="265" key="NewPhpFileDialog" timestamp="1603816892572">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1603816577278" />
+    <state x="477" y="265" key="NewPhpFileDialog/0.0.1280.689@0.0.1280.689" timestamp="1603816892572" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1603909861070">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1603909861070" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1603816922033">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1603816922033" />
+    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1603905560153">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1603905560153" />
   </component>
 </project>
