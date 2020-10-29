@@ -23,9 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="acb843b5-2923-41db-bc3d-a77267ea2dec" name="Default Changelist" comment="Ending of directory structure Avanza project">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/AdminController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/Controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controller/MemberController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/firstViews.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +71,7 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="PHP Script.DAO.php">
+  <component name="RunManager" selected="PHP Script.index.php">
     <configuration name="DAO.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/Model/DAO.php">
       <method v="2" />
     </configuration>
@@ -85,9 +88,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHP Script.index.php" />
         <item itemvalue="PHP Script.DAO.php" />
         <item itemvalue="PHP Script.Database.php" />
-        <item itemvalue="PHP Script.index.php" />
       </list>
     </recent_temporary>
   </component>
@@ -103,6 +106,7 @@
       <workItem from="1603826269991" duration="236000" />
       <workItem from="1603880030394" duration="551000" />
       <workItem from="1603884006828" duration="18191000" />
+      <workItem from="1603980115067" duration="10274000" />
     </task>
     <task id="LOCAL-00001" summary="Beginning of the Avanza project">
       <created>1603816568975</created>
@@ -157,42 +161,62 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.689@0.0.1280.689" timestamp="1603909928477" />
-    <state x="446" y="61" key="#com.intellij.ide.util.MemberChooser" timestamp="1603906610826">
+    <state x="446" y="61" key="#com.intellij.ide.util.MemberChooser" timestamp="1603991813969">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="446" y="61" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" timestamp="1603906610826" />
-    <state width="1237" height="160" key="GridCell.Tab.0.bottom" timestamp="1603816944447">
+    <state x="446" y="61" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" timestamp="1603991813969" />
+    <state x="487" y="150" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603987309959">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="160" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1603816944447" />
-    <state width="1237" height="160" key="GridCell.Tab.0.center" timestamp="1603816944446">
+    <state x="487" y="150" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.689@0.0.1280.689" timestamp="1603987309959" />
+    <state x="371" y="92" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603987515583">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="160" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1603816944446" />
-    <state width="1237" height="160" key="GridCell.Tab.0.left" timestamp="1603816944446">
+    <state x="371" y="92" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.689@0.0.1280.689" timestamp="1603987515583" />
+    <state width="1237" height="160" key="GridCell.Tab.0.bottom" timestamp="1603996499563">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="160" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1603816944446" />
-    <state width="1237" height="160" key="GridCell.Tab.0.right" timestamp="1603816944446">
+    <state width="1237" height="160" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1603996499563" />
+    <state width="1237" height="160" key="GridCell.Tab.0.center" timestamp="1603996499562">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="160" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1603816944446" />
-    <state x="465" y="52" key="NewPhpClassDialog" timestamp="1603910011081">
+    <state width="1237" height="160" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1603996499562" />
+    <state width="1237" height="160" key="GridCell.Tab.0.left" timestamp="1603996499562">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="465" y="52" key="NewPhpClassDialog/0.0.1280.689@0.0.1280.689" timestamp="1603910011081" />
-    <state x="477" y="265" key="NewPhpFileDialog" timestamp="1603816892572">
+    <state width="1237" height="160" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1603996499562" />
+    <state width="1237" height="160" key="GridCell.Tab.0.right" timestamp="1603996499563">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="477" y="265" key="NewPhpFileDialog/0.0.1280.689@0.0.1280.689" timestamp="1603816892572" />
+    <state width="1237" height="160" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1603996499563" />
+    <state x="221" y="80" key="IDE.errors.dialog" timestamp="1603985414006">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="221" y="80" key="IDE.errors.dialog/0.0.1280.689@0.0.1280.689" timestamp="1603985414006" />
+    <state x="465" y="52" key="NewPhpClassDialog" timestamp="1603991756685">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="465" y="52" key="NewPhpClassDialog/0.0.1280.689@0.0.1280.689" timestamp="1603991756685" />
+    <state x="477" y="265" key="NewPhpFileDialog" timestamp="1603989957752">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="477" y="265" key="NewPhpFileDialog/0.0.1280.689@0.0.1280.689" timestamp="1603989957752" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1603909861070">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1603909861070" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1603991102375">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1280.689@0.0.1280.689" timestamp="1603991102375" />
     <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1603816922033">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1603816922033" />
+    <state x="297" y="153" key="run.anything.popup" timestamp="1603989147016">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="297" y="153" key="run.anything.popup/0.0.1280.689@0.0.1280.689" timestamp="1603989147016" />
     <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1603905560153">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
