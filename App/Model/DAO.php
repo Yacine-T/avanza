@@ -11,16 +11,16 @@ class DAO
 
         else {
            $query = Database::getInstance()->getDb()->prepare($sql);
-           $exec = $query->execute(array($param));
+           $exec = $query->execute($param);
         }
 
         return $exec;
     }
 
-    public function queryAll() {
+    public function queryAll($sql) {
 
         try {
-            $request = $this->request();
+            $request = $this->request($sql);
             $data = $request->fetchAll(PDO::FETCH_ASSOC);
             $data->closeCursor();
         }
@@ -32,10 +32,10 @@ class DAO
         return $data;
     }
 
-    public function queryRow() {
+    public function queryRow($sql, $param) {
 
         try {
-            $request = $this->request();
+            $request = $this->request($sql, $param);
             $data = $request->fetch(PDO::FETCH_ASSOC);
             $data->closeCursor();
         }
@@ -47,6 +47,12 @@ class DAO
         return $data;
     }
 
+    public function insertRow($table, array $columns, array $values) {
+            $sql = "INSERT INTO " . $table .
+                    " (" . implode(',' , $columns) . " ) 
+                    VALUES " . "(" . implode(',' , $values) . ")";
+            $this->request($sql);
+    }
 
 }
 

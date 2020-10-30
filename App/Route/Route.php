@@ -16,6 +16,7 @@ class Route
     }
 
     public function route() {
+
         if (isset($_GET['status'])) {
             if ($_GET['status'] == "signout") {
                 if (isset($_GET['action'])) {
@@ -38,7 +39,25 @@ class Route
             }
 
             elseif ($_GET['status'] == "signup") {
-                $this->_controller->signUp();
+                if (isset(
+                            $_POST["name"]) && isset($_POST["firstname"])
+                    && isset($_POST["profile_picture"])
+                    && isset($_POST["phone"]) && isset($_POST["email"])
+                    && isset($_POST["password"]) && isset($_POST["passwordConfirmation"])) {
+
+                    if($_POST["password"] == $_POST["passwordConfirmation"]) {
+                        $this->_controller->signUp(
+                            $_POST["name"], $_POST["firstname"],
+                            $_POST["profile_picture"], $_POST["phone"],
+                            $_POST["email"], password_hash($_POST["password"]));
+                    }
+
+                    else {
+                        echo "Les mots de passe ne se correspondent pas !";
+                    }
+
+                }
+
             }
 
             else {
@@ -52,10 +71,6 @@ class Route
         }
 
 
-
-    }
-
-    public function error(){
 
     }
 }

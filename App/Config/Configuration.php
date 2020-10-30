@@ -1,8 +1,8 @@
 <?php
 
 // Connexion database credential
-define("HOST", "mysql:host=localhost");
-define("DBNAME", "dbname=avanza");
-define("ENCODING", "charset=utf8");
-define("ID", "root");
+define("HOST", "localhost");
+define("DBNAME", "avanza");
+define("ENCODING", "utf8");
+define("USER", "root");
 define("PASSWORD", "");

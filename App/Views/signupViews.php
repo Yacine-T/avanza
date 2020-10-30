@@ -8,24 +8,27 @@
     <title>Sign up</title>
 </head>
     <body>
-            <form action="" method="post">
+            <form action="index.php?status=signup" method="post">
                 <label for="name">Entrez votre nom</label><br>
-                <input type="text" placeholder="Entrez votre nom" id="name" name="name">
+                <input type="text" placeholder="Entrez votre nom" id="name" name="name" required>
                     <br>
-                <label for="firstname">Entrez votre nom</label><br>
-                <input type="text" placeholder="Entrez votre prenom" id="firstname" name="firstname">
+                <label for="firstname">Entrez votre prenom</label><br>
+                <input type="text" placeholder="Entrez votre prenom" id="firstname" name="firstname" required>
                     <br>
                 <label for="profilePicture">Uploder une image de profile</label><br>
-                <input type="file" placeholder="Uploder une image de profile" id="profilePicture" name="profilePicture">
+                <input type="file" placeholder="Uploder une image de profile" id="profile_picture" name="profile_picture">
                     <br>
                 <label for="phone">Entrez votre numéro de téléphone</label><br>
-                <input type="text" maxlength="10" placeholder="Entrez votre numéro de téléphone" id="phone" name="phone">
+                <input type="text" maxlength="10" placeholder="Entrez votre numéro de téléphone" id="phone" name="phone" required>
                     <br>
                 <label for="email">Entrez votre email</label><br>
-                <input type="email" placeholder="Entrez votre email" id="email" name="password">
+                <input type="email" placeholder="Entrez votre email" id="email" name="email" required>
                     <br>
                 <label for="password">Entrez votre mot de passe :</label><br>
-                <input type="password" placeholder="Entrez votre password" id="password" name="password">
+                <input type="password" placeholder="Entrez votre password" id="password" name="password" required>
+                    <br>
+                <label for="passwordConfirmation">Confirmez votre mot de passe :</label><br>
+                <input type="password" placeholder="Confirmez votre mot de passe " id=passwordConfirmation" name="passwordConfirmation" required>
                     <br>
                 <input type="submit">
             </form>

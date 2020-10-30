@@ -3,16 +3,14 @@
 
 class Database
 {
-    private $db = null;
+    private $db;
     private static $instance = null;
 
     /**
      * Database constructor.
-     * @param null $db
      */
-    public function __construct($db)
-    {
-        $this->db = new PDO(HOST, DBNAME, ENCODING, ID, PASSWORD);
+    public function __construct()
+    {;
     }
 
     /**
@@ -20,7 +18,7 @@ class Database
      */
     public function getDb(): PDO
     {
-        return $this->db;
+        return $this->db = new PDO("mysql:host=".HOST."; dbname=".DBNAME.";charset=".ENCODING , USER, PASSWORD);
     }
 
     /**
