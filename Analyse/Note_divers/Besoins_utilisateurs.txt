@@ -1,0 +1,75 @@
+Public
+
+		Consulter le contenu du site
+		Se rendre sur le CQFD/FB/Insta
+		Adhérer à l'asso en payant 3€ de frais d'adhésion
+
+Membre en plus des fonctionnalités du public qui lui sont attribués
+	Compte utilisateur
+		
+		Supprimer leurs compte
+		Modifier leurs un compte (nom, prénom etc ...)
+
+	Post
+		Rédiger des posts
+			Article
+			Recette avec des ingérdients des ustensils et des étapes à suivres
+		Commenter des posts
+		Noter des recttes
+		Demander la suppression/modification d'un post
+	Evènnement
+		Créer des événnement en définnissant un quota de place ou pas et définissant une iste 
+		d'activité
+			Présentation
+			Autres (goûter etc ...)
+			Atelier
+		Participer à des évènement
+			Présentation
+			Autres (goûter etc ...)
+			Atelier
+			Soirée d'intégration
+			Réunion
+		Annuler leurs réservation
+		Rapporter une réunion
+	Mail
+		Envoyer des mails sur le support
+		Recevoir des mails de Avanza
+
+	Panier
+		Réserver un certains nombre de panier panier
+			Avec fruits
+			Légumes
+			Oeufs (optionnel)
+
+Admin en plus des fonctionnalités des admins qui lui sont attribués
+
+	Compte utilisateur
+		Créer un compte utilisateur
+		Valider une adhésion
+		Promouvoir un membre au statut d'admin
+		Supprimer un compte
+		Modifier une donnée d'un compte (nom, prénom etc ...)
+	Post
+		Rédiger des posts
+			annonces
+		Administrer les posts	
+			suppression/modification/validation d'un post
+	Evènnement
+		Créer des événnement en définnissant un quota de place ou pas et en définissant une liste 
+		d'activité
+			soirée d'intégration
+			réunion
+		Gérer les évènements
+			valider un évènement
+			modifier leurs contenus lors de leurs publication (heure du rendez-vous etc ...)
+			supprimer un évènnement
+			Ajouter/supprimer un participant
+			Accèder aux derniers évènements pour les gérer (supprimer/modifier/consulter)
+			
+		Mail
+			Envoyer des mails aux membres
+			Recevoir des mails
+			Gérer les mails recus des mails de Avanza
+
+		Panier
+			Composer un panier
