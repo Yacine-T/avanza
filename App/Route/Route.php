@@ -18,7 +18,7 @@ class Route
     public function route() {
 
         if (isset($_GET['status'])) {
-            if ($_GET['status'] == "signout") {
+            if ($_GET['status'] == "logout") {
                 if (isset($_GET['action'])) {
                     if($_GET['action'] == "connexion") {
                         $this->_controller->connexion();
@@ -34,8 +34,8 @@ class Route
             }
 
 
-            elseif ($_GET['status'] == "signin") {
-                $this->_controller->signIn();
+            elseif ($_GET['status'] == "login") {
+                $this->_controller->logIn();
             }
 
             elseif ($_GET['status'] == "signup") {

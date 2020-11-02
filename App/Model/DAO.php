@@ -17,12 +17,11 @@ class DAO
         return $exec;
     }
 
-    public function queryAll($sql) {
+    public function queryAll($sql, $param = null) {
 
         try {
-            $request = $this->request($sql);
+            $request = $this->request($sql, $param);
             $data = $request->fetchAll(PDO::FETCH_ASSOC);
-            $data->closeCursor();
         }
 
         catch (PDOException $e) {

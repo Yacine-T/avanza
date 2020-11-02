@@ -13,9 +13,23 @@ class UserDAO extends DAO
         $this->insertRow("users", $column, $values);
     }
 
-    public function selectAllUser() {
+    public function getAllUser() {
         $sql = "SELECT * FROM users";
-        return $this->queryAll();
+        return $this->queryAll($sql);
     }
+
+  /*  public function ifExistUser($email, $password) {
+        $res = false;
+        $allUsers = $this->getAllUser();
+        foreach ($allUsers as $users)  {
+            if ($email == $users['email'] || password_verify($password, $users['password']))
+                 {
+                    $res = true;
+                }
+                   return $res;
+        }
+    }
+*/
+
 
 }

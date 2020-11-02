@@ -8,16 +8,17 @@
     <title>Connexion</title>
 </head>
     <body>
-        <form action="index.php?part=member" method="post">
+        <form action="index.php?status=login" method="post">
             <label for="email">Entrez votre email</label><br>
             <input type="email" placeholder="Entrez votre email" id="email" name="password">
                 <br><br>
             <label for="password">Entrez votre mot de passe :</label><br>
             <input type="password" placeholder="Entrez votre password" id="password" name="password">
                 <br><br>
-            <a href="index.php">Accueil</a>
-            <br>
-            <a href="index.php?action=signup">inscription</a>
+            <input type="submit" value="Se connecter">
         </form>
+                <br>
+        <a href="index.php">Accueil</a>
+        <a href="index.php?status=logout&action=join">inscription</a>
     </body>
 </html>

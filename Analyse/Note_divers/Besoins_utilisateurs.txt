@@ -18,7 +18,7 @@ Membre en plus des fonctionnalités du public qui lui sont attribués
 		Noter des recttes
 		Demander la suppression/modification d'un post
 	Evènnement
-		Créer des événnement en définnissant un quota de place ou pas et définissant une iste 
+		Créer des événnement en définissant un quota de place ou pas et définissant une liste 
 		d'activité
 			Présentation
 			Autres (goûter etc ...)

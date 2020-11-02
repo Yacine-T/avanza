@@ -30,9 +30,9 @@
                 <label for="passwordConfirmation">Confirmez votre mot de passe :</label><br>
                 <input type="password" placeholder="Confirmez votre mot de passe " id=passwordConfirmation" name="passwordConfirmation" required>
                     <br>
-                <input type="submit">
+                <input type="submit" value="s'inscrire">
             </form>
             <a href="index.php">Acceuil</a><br>
-            <a href="index.php?part=connexion">connexion</a>
+            <a href="index.php?status=logout&action=connexion">connexion</a>
     </body>
 </html>
