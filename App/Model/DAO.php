@@ -6,15 +6,15 @@ class DAO
 {
     public function request($sql, $param = null) {
         if ($param == null) {
-            $exec = Database::getInstance()->getDb()->query($sql);
+            $query = Database::getInstance()->getDb()->query($sql);
         }
 
         else {
            $query = Database::getInstance()->getDb()->prepare($sql);
-           $exec = $query->execute($param);
+           $query->execute(array($param));
         }
 
-        return $exec;
+        return $query;
     }
 
     public function queryAll($sql, $param = null) {
@@ -31,12 +31,11 @@ class DAO
         return $data;
     }
 
-    public function queryRow($sql, $param) {
+    public function queryRow($sql, $param = null) {
 
         try {
             $request = $this->request($sql, $param);
             $data = $request->fetch(PDO::FETCH_ASSOC);
-            $data->closeCursor();
         }
 
         catch (PDOException $e) {

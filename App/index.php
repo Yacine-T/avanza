@@ -12,4 +12,3 @@ $_route = new Route();
     else {
         $_route->erreur();
     }
-echo password_hash("Y@cine011099", PASSWORD_DEFAULT );

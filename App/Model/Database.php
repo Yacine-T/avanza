@@ -19,6 +19,7 @@ class Database
     public function getDb(): PDO
     {
         return $this->db = new PDO("mysql:host=".HOST."; dbname=".DBNAME.";charset=".ENCODING , USER, PASSWORD);
+
     }
 
     /**

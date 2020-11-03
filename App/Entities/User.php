@@ -3,39 +3,45 @@
 
 class User
 {
-    protected $_id;
-    protected  $_name;
-    protected $_firtsname;
-    protected $_profilePicture;
-    protected $_phone;
-    protected $_email;
-    protected $_password;
-    protected $_accountVerified;
-    protected $_creationDate;
+    protected $id;
+    protected $name;
+    protected $firtsname;
+    protected $profilePicture;
+    protected $phone;
+    protected $email;
+    protected $password;
+    protected $accountVerified;
+    protected $paiementOnline;
+    protected $paiementDate;
+    protected $creationDate;
 
     /**
      * User constructor.
-     * @param $_id
-     * @param $_name
-     * @param $_firtsname
-     * @param $_profilePicture
-     * @param $_phone
-     * @param $_email
-     * @param $_password
-     * @param $_accountVerified
-     * @param $_creationDate
+     * @param $id
+     * @param $name
+     * @param $firtsname
+     * @param $profilePicture
+     * @param $phone
+     * @param $email
+     * @param $password
+     * @param $accountVerified
+     * @param $paiementOnline
+     * @param $paiementDate
+     * @param $creationDate
      */
-    public function __construct($_id, $_name, $_firtsname, $_profilePicture, $_phone, $_email, $_password, $_accountVerified, $_creationDate)
+    public function __construct($id, $name, $firtsname, $profilePicture, $phone, $email, $password, $accountVerified, $paiementOnline, $paiementDate, $creationDate)
     {
-        $this->_id = $_id;
-        $this->_name = $_name;
-        $this->_firtsname = $_firtsname;
-        $this->_profilePicture = $_profilePicture;
-        $this->_phone = $_phone;
-        $this->_email = $_email;
-        $this->_password = $_password;
-        $this->_accountVerified = $_accountVerified;
-        $this->_creationDate = $_creationDate;
+        $this->id = $id;
+        $this->name = $name;
+        $this->firtsname = $firtsname;
+        $this->profilePicture = $profilePicture;
+        $this->phone = $phone;
+        $this->email = $email;
+        $this->password = $password;
+        $this->accountVerified = $accountVerified;
+        $this->paiementOnline = $paiementOnline;
+        $this->paiementDate = $paiementDate;
+        $this->creationDate = $creationDate;
     }
 
     /**
@@ -43,7 +49,7 @@ class User
      */
     public function getId()
     {
-        return $this->_id;
+        return $this->id;
     }
 
     /**
@@ -51,7 +57,7 @@ class User
      */
     public function setId($id): void
     {
-        $this->_id = $id;
+        $this->id = $id;
     }
 
     /**
@@ -59,7 +65,7 @@ class User
      */
     public function getName()
     {
-        return $this->_name;
+        return $this->name;
     }
 
     /**
@@ -67,7 +73,7 @@ class User
      */
     public function setName($name): void
     {
-        $this->_name = $name;
+        $this->name = $name;
     }
 
     /**
@@ -75,7 +81,7 @@ class User
      */
     public function getFirtsname()
     {
-        return $this->_firtsname;
+        return $this->firtsname;
     }
 
     /**
@@ -83,7 +89,7 @@ class User
      */
     public function setFirtsname($firtsname): void
     {
-        $this->_firtsname = $firtsname;
+        $this->firtsname = $firtsname;
     }
 
     /**
@@ -91,7 +97,7 @@ class User
      */
     public function getProfilePicture()
     {
-        return $this->_profilePicture;
+        return $this->profilePicture;
     }
 
     /**
@@ -99,7 +105,7 @@ class User
      */
     public function setProfilePicture($profilePicture): void
     {
-        $this->_profilePicture = $profilePicture;
+        $this->profilePicture = $profilePicture;
     }
 
     /**
@@ -107,7 +113,7 @@ class User
      */
     public function getPhone()
     {
-        return $this->_phone;
+        return $this->phone;
     }
 
     /**
@@ -115,7 +121,7 @@ class User
      */
     public function setPhone($phone): void
     {
-        $this->_phone = $phone;
+        $this->phone = $phone;
     }
 
     /**
@@ -123,7 +129,7 @@ class User
      */
     public function getEmail()
     {
-        return $this->_email;
+        return $this->email;
     }
 
     /**
@@ -131,7 +137,7 @@ class User
      */
     public function setEmail($email): void
     {
-        $this->_email = $email;
+        $this->email = $email;
     }
 
     /**
@@ -139,7 +145,7 @@ class User
      */
     public function getPassword()
     {
-        return $this->_password;
+        return $this->password;
     }
 
     /**
@@ -147,7 +153,7 @@ class User
      */
     public function setPassword($password): void
     {
-        $this->_password = $password;
+        $this->password = $password;
     }
 
     /**
@@ -155,7 +161,7 @@ class User
      */
     public function getAccountVerified()
     {
-        return $this->_accountVerified;
+        return $this->accountVerified;
     }
 
     /**
@@ -163,7 +169,39 @@ class User
      */
     public function setAccountVerified($accountVerified): void
     {
-        $this->_accountVerified = $accountVerified;
+        $this->accountVerified = $accountVerified;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPaiementOnline()
+    {
+        return $this->paiementOnline;
+    }
+
+    /**
+     * @param mixed $paiementOnline
+     */
+    public function setPaiementOnline($paiementOnline): void
+    {
+        $this->paiementOnline = $paiementOnline;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPaiementDate()
+    {
+        return $this->paiementDate;
+    }
+
+    /**
+     * @param mixed $paiementDate
+     */
+    public function setPaiementDate($paiementDate): void
+    {
+        $this->paiementDate = $paiementDate;
     }
 
     /**
@@ -171,7 +209,7 @@ class User
      */
     public function getCreationDate()
     {
-        return $this->_creationDate;
+        return $this->creationDate;
     }
 
     /**
@@ -179,6 +217,8 @@ class User
      */
     public function setCreationDate($creationDate): void
     {
-        $this->_creationDate = $creationDate;
+        $this->creationDate = $creationDate;
     }
+
+
 }
