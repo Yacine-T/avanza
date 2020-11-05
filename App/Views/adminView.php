@@ -2,5 +2,4 @@
 
 echo "admin"; ?>
 
-<a href="index.php?part=member">welcome</a>
-<a href="index.php?part=admin">member</a>
+<a href="index.php?part=logout">logout</a>

@@ -1,6 +1,6 @@
 <?php
 
-require_once("Controller/Controller.php");
+require_once("Controller/WelcomeServices.php");
 
 class Route
 {
@@ -12,7 +12,7 @@ class Route
      */
     public function __construct()
     {
-        $this->_controller = new Controller();
+        $this->_controller = new WelcomeServices();
     }
 
     public function route() {
@@ -35,7 +35,7 @@ class Route
 
 
             elseif ($_GET['status'] == "login") {
-                $this->_controller->logIn();
+                $this->_controller->logIn($_POST['email'], $_POST['password']);
             }
 
             elseif ($_GET['status'] == "signup") {

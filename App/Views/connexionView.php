@@ -10,10 +10,10 @@
     <body>
         <form action="index.php?status=login" method="post">
             <label for="email">Entrez votre email</label><br>
-            <input type="email" placeholder="Entrez votre email" id="email" name="password">
+            <input type="email" placeholder="Entrez votre email" id="email" name="email">
                 <br><br>
             <label for="password">Entrez votre mot de passe :</label><br>
-            <input type="password" placeholder="Entrez votre password" id="password" name="password">
+            <input type="password" placeholder="Entrez votre mot de passe" id="password" name="password">
                 <br><br>
             <input type="submit" value="Se connecter">
         </form>

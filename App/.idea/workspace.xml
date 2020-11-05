@@ -24,12 +24,12 @@
   <component name="ChangeListManager">
     <list default="true" id="acb843b5-2923-41db-bc3d-a77267ea2dec" name="Default Changelist" comment="Ending of directory structure Avanza project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/DAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/DAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/WelcomeServices.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/UserDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/UserDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Route/Route.php" beforeDir="false" afterPath="$PROJECT_DIR$/Route/Route.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/adminView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/adminView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/connexionView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/connexionView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/memberView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/memberView.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +114,8 @@
       <workItem from="1604169186992" duration="1117000" />
       <workItem from="1604325027371" duration="18539000" />
       <workItem from="1604403150319" duration="16775000" />
+      <workItem from="1604488739322" duration="10650000" />
+      <workItem from="1604610725290" duration="208000" />
     </task>
     <task id="LOCAL-00001" summary="Beginning of the Avanza project">
       <created>1603816568975</created>
@@ -172,10 +174,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="446" y="61" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" timestamp="1604405959019" />
-    <state x="487" y="150" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603987309959">
+    <state x="113" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604488779396">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="487" y="150" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.689@0.0.1280.689" timestamp="1603987309959" />
+    <state x="113" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.689@0.0.1280.689" timestamp="1604488779396" />
     <state x="371" y="92" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603987515583">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -196,10 +198,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state width="1237" height="160" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1604428715513" />
-    <state x="221" y="80" key="IDE.errors.dialog" timestamp="1604409631482">
+    <state x="221" y="80" key="IDE.errors.dialog" timestamp="1604582354899">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="221" y="80" key="IDE.errors.dialog/0.0.1280.689@0.0.1280.689" timestamp="1604409631482" />
+    <state x="221" y="80" key="IDE.errors.dialog/0.0.1280.689@0.0.1280.689" timestamp="1604582354899" />
     <state x="465" y="52" key="NewPhpClassDialog" timestamp="1604423897087">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
