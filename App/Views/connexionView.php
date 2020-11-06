@@ -8,7 +8,7 @@
     <title>Connexion</title>
 </head>
     <body>
-        <form action="index.php?status=login" method="post">
+        <form action="index.php?service=user&action=login" method="post">
             <label for="email">Entrez votre email</label><br>
             <input type="email" placeholder="Entrez votre email" id="email" name="email">
                 <br><br>
@@ -19,6 +19,6 @@
         </form>
                 <br>
         <a href="index.php">Accueil</a>
-        <a href="index.php?status=logout&action=join">inscription</a>
+        <a href="index.php?action=join">inscription</a>
     </body>
 </html>

@@ -1,10 +1,12 @@
 <?php
 
-require_once("Controller/WelcomeServices.php");
+require_once("Controller/PublicServices.php");
+require_once("Controller/UserServices.php");
 
 class Route
 {
-    private $_controller;
+    private $_pbServices;
+    private $_userServices;
 
     /**
      * Route constructor.
@@ -12,50 +14,47 @@ class Route
      */
     public function __construct()
     {
-        $this->_controller = new WelcomeServices();
+        $this->_pbServices = new PublicServices();
+        $this->_userServices = new UserServices();
     }
 
-    public function route() {
+    public function route()
+    {
 
-        if (isset($_GET['status'])) {
-            if ($_GET['status'] == "logout") {
+        if (isset($_GET['service'])) {
+            if ($_GET['service'] == 'user') {
                 if (isset($_GET['action'])) {
-                    if($_GET['action'] == "connexion") {
-                        $this->_controller->connexion();
-                    }
-                    elseif ($_GET['action'] == "join") {
-                        $this->_controller->join();
-                    }
-                }
-
-                else {
-                    $this->_controller->welcome();
-                }
-            }
-
-
-            elseif ($_GET['status'] == "login") {
-                $this->_controller->logIn($_POST['email'], $_POST['password']);
-            }
-
-            elseif ($_GET['status'] == "signup") {
-                        $this->_controller->signUp(
+                    if ($_GET['action'] == 'login') {
+                        $this->_userServices->logIn($_POST['email'], $_POST['password']);
+                    } elseif ($_GET['action'] == 'logout') {
+                        $this->_userServices->logOut();
+                    } elseif ($_GET['action'] == 'signup') {
+                        $this->_userServices->signUp(
                             $_POST["name"], $_POST["firstname"],
                             $_POST["profile_picture"], $_POST["phone"],
                             $_POST["email"], $_POST["password"], $_POST["passwordConfirmation"]);
+                    } else {
+                        $this->_userServices->welcome();
+                    }
+                } else {
+                    $this->_userServices->welcome();
+                }
+            } else {
+                $this->_pbServices()->welcome();
             }
 
-            else {
-                $this->_controller->welcome();
+        } else {
+            if (isset($_GET['action'])) {
+                if ($_GET['action'] == 'connexion') {
+                    $this->_pbServices->connexion();
+                } elseif ($_GET['action'] == 'join') {
+                    $this->_pbServices->join();
+                } else {
+                    $this->_pbServices->welcome();
+                }
+            } else {
+                $this->_pbServices->welcome();
             }
-
         }
-
-        else {
-            $this->_controller->welcome();
-        }
-
-
-
     }
 }

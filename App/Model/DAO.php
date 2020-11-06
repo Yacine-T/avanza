@@ -22,6 +22,7 @@ class DAO
         try {
             $request = $this->request($sql, $param);
             $data = $request->fetchAll(PDO::FETCH_ASSOC);
+            $request->closeCursor();
         }
 
         catch (PDOException $e) {
@@ -36,6 +37,7 @@ class DAO
         try {
             $request = $this->request($sql, $param);
             $data = $request->fetch(PDO::FETCH_ASSOC);
+            $request->closeCursor();
         }
 
         catch (PDOException $e) {

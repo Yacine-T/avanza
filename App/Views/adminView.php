@@ -1,5 +1,5 @@
 <?php
+session_start();
+echo "welcome " . $_SESSION['data']['name'] . " " . $_SESSION['data']['name'];?> ?>
 
-echo "admin"; ?>
-
-<a href="index.php?part=logout">logout</a>
+<a href="index.php?service=user&action=logout">logout</a>

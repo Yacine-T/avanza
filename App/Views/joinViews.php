@@ -8,7 +8,7 @@
     <title>Sign up</title>
 </head>
     <body>
-            <form action="index.php?status=signup" method="post">
+            <form action="index.php?action=signup" method="post">
                 <label for="name">Entrez votre nom</label><br>
                 <input type="text" placeholder="Entrez votre nom" id="name" name="name" required>
                     <br>
@@ -33,6 +33,6 @@
                 <input type="submit" value="s'inscrire">
             </form>
             <a href="index.php">Acceuil</a><br>
-            <a href="index.php?status=logout&action=connexion">connexion</a>
+            <a href="index.php?service=user&action=connexion">connexion</a>
     </body>
 </html>

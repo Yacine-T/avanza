@@ -1,4 +1,5 @@
-<?php echo "member";?>
+<?php
 
-<a href="index.php?part=logout">logout</a>
+echo "welcome " . $_SESSION['name'] . " " . $_SESSION['firstname'];?>
 
+<a href="index.php?service=user&action=logout">logout</a>

@@ -1,6 +1,6 @@
 <?php
+echo "welcome";
+?>
 
-echo "welcome"; ?>
-
-<a href="index.php?status=logout&action=connexion">Connectez-vous</a>
-<a href="index.php?status=logout&action=join">Inscrivez-vous</a>
+<a href="index.php?action=connexion">Connectez-vous</a>
+<a href="index.php?action=join">Inscrivez-vous</a>
