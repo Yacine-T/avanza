@@ -1,23 +1,37 @@
 <?php
-session_start();
 
-require_once("PublicServices.php");
 require_once("Model/UserDAO.php");
 require_once("Model/MemberDAO.php");
 
-class UserServices extends PublicServices
+class HomeController
 {
     private $_userDAO;
     private $_membersDAO;
 
     /**
-     * PublicServices constructor.
+     * HomeController constructor.
      * @param $_userDAO
+     * @param $_membersDAO
      */
     public function __construct()
     {
         $this->_userDAO = new UserDAO();
         $this->_membersDAO = new MemberDAO();
+    }
+
+    public function home()
+    {
+            require_once("Views/WelcomeView.php");
+    }
+
+    public function connexion()
+    {
+        require_once("Views/ConnectionView.php");
+    }
+
+    public function join()
+    {
+        require_once("Views/JoinViews.php");
     }
 
     public function logIn($email, $password)
@@ -27,13 +41,14 @@ class UserServices extends PublicServices
         if ($userData == true) {
             if (password_verify($password, $userData["password"])) {
                 if ($userData["account_verified"] == true) {
-                    $_SESSION['name'] = $userData['name'];
-                    $_SESSION['firstname'] = $userData['firstname'];
+                    $_SESSION = $userData;
                     if ($userStatus == "admin") {
-                        require_once("Views/adminView.php");
+                        require_once("Views/AdminView.php");
+                        $_SESSION['status'] = "admin";
                         exit();
                     } else {
-                        require_once("Views/memberView.php");
+                        require_once("Views/MemberView.php");
+                        $_SESSION['status'] = "member";
                         exit();
                     }
                 } else {
@@ -59,8 +74,15 @@ class UserServices extends PublicServices
             exit();
         } else {
             header("Location:index.php");
-            echo "Vous n'êtes pas connecté. Merci de vous authentifié.";
             exit();
+        }
+    }
+
+    public function LoggedIn() {
+        if ($_SESSION['status'] == "admin") {
+            require_once("Views/AdminView.php");
+        }else {
+            require_once("Views/MemberView.php");
         }
     }
 

@@ -3,11 +3,11 @@
 require_once("Model/UserDAO.php");
 require_once("Entities/Member.php");
 
-class MemberDAO extends UserDAO
+class AdminDAO extends UserDAO
 {
-    public function addMember() {
+    public function addAdmin() {
         $id = $this->getLastUserById();
         $column = ["user"];
-        $this->insertRow("members", $column, $id);
+        $this->insertRow("admins", $column, $id);
     }
 }

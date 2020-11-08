@@ -8,6 +8,7 @@
     <title>Sign up</title>
 </head>
     <body>
+    <h1>Inscription</h1>
             <form action="index.php?action=signup" method="post">
                 <label for="name">Entrez votre nom</label><br>
                 <input type="text" placeholder="Entrez votre nom" id="name" name="name" required>

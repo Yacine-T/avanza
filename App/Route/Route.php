@@ -1,12 +1,10 @@
 <?php
 
-require_once("Controller/PublicServices.php");
-require_once("Controller/UserServices.php");
+require_once("Controller/HomeController.php");
 
 class Route
 {
-    private $_pbServices;
-    private $_userServices;
+    private $_controller;
 
     /**
      * Route constructor.
@@ -14,8 +12,7 @@ class Route
      */
     public function __construct()
     {
-        $this->_pbServices = new PublicServices();
-        $this->_userServices = new UserServices();
+        $this->_controller = new HomeController();
     }
 
     public function route()
@@ -25,36 +22,53 @@ class Route
             if ($_GET['service'] == 'user') {
                 if (isset($_GET['action'])) {
                     if ($_GET['action'] == 'login') {
-                        $this->_userServices->logIn($_POST['email'], $_POST['password']);
+                        $this->_controller->logIn($_POST['email'], $_POST['password']);
                     } elseif ($_GET['action'] == 'logout') {
-                        $this->_userServices->logOut();
+                        $this->_controller->logOut();
                     } elseif ($_GET['action'] == 'signup') {
-                        $this->_userServices->signUp(
+                        $this->_controller->signUp(
                             $_POST["name"], $_POST["firstname"],
                             $_POST["profile_picture"], $_POST["phone"],
                             $_POST["email"], $_POST["password"], $_POST["passwordConfirmation"]);
                     } else {
-                        $this->_userServices->welcome();
+                        $this->_controller->home();
                     }
                 } else {
-                    $this->_userServices->welcome();
+                    $this->_controller->home();
                 }
-            } else {
-                $this->_pbServices()->welcome();
+            }
+            else {
+                $this->_controller->home();
             }
 
         } else {
             if (isset($_GET['action'])) {
                 if ($_GET['action'] == 'connexion') {
-                    $this->_pbServices->connexion();
+                    if (isset($_SESSION) && !empty($_SESSION)) {
+                        $this->_controller->LoggedIn();
+                    }else {
+                        $this->_controller->connexion();
+                    }
                 } elseif ($_GET['action'] == 'join') {
-                    $this->_pbServices->join();
-                } else {
-                    $this->_pbServices->welcome();
+                    if (isset($_SESSION) && !empty($_SESSION)) {
+                        $this->_controller->LoggedIn();
+                    }else {
+                        $this->_controller->join();
+                    }
+                }
+                else {
+                    if (isset($_SESSION) && !empty($_SESSION)) {
+                        $this->_controller->LoggedIn();
+                    }else {
+                        $this->_controller->home();
+                    }
                 }
             } else {
-                $this->_pbServices->welcome();
-            }
+                if (isset($_SESSION) && !empty($_SESSION)) {
+                    $this->_controller->LoggedIn();
+                }else {
+                    $this->_controller->home();
+                }            }
         }
     }
 }

@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 // Import the config file to get get the DB's ID
 require_once("Config/Configuration.php");
