@@ -46,6 +46,7 @@ class Route
                 }
                 elseif ($_GET['action'] == "logout") {
                     $this->_userController->logOut();
+                    require_once("Views/HomeView.php");
                 }
                 else {
                     require_once("Views/MemberView.php");
@@ -63,6 +64,15 @@ class Route
                         $this->_userController->logIn(
                             $_POST["email"],
                             $_POST['password']);
+                        if ($_SESSION['status'] == "admin") {
+                            require_once("Views/AdminView.php");
+                            $_SESSION['status'] = "admin";
+                            exit();
+                        } else {
+                            require_once("Views/MemberView.php");
+                            $_SESSION['status'] = "member";
+                            exit();
+                        }
                     } elseif ($_GET['action'] == "signup") {
                         if (isset(
                             $_POST['name'],
@@ -80,7 +90,6 @@ class Route
                                     $_POST['email'],
                                     $_POST['password'],
                                     $_POST['passwordConfirmation']);
-                        require_once("Views/HomeView.php");
                     } else {
                         require_once("Views/HomeView.php");
                     }

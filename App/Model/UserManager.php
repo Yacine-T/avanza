@@ -49,4 +49,15 @@ class UserManager extends Manager
         $this->delete("`users`", $conditions);
     }
 
+    public function email_verify($emailUser, array $emails) {
+        $res = false;
+        foreach ($emails as $email) {
+            if ($email == $emailUser){
+                $res = true;
+            }
+        }
+
+        return $res;
+    }
+
 }

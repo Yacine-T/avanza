@@ -7,6 +7,6 @@ class MemberManager extends UserManager
     public function addMember() {
         $id = $this->getLastUserById();
         $column = ["user"];
-        $this->insertRow("members", $column, $id);
+        $this->insert("members", $column, $id);
     }
 }

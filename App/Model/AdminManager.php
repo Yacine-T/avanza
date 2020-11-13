@@ -7,6 +7,6 @@ class AdminManager extends UserManager
     public function addAdmin() {
         $id = $this->getLastUserById();
         $column = ["user"];
-        $this->insertRow("admins", $column, $id);
+        $this->insert("admins", $column, $id);
     }
 }
