@@ -24,17 +24,50 @@
   <component name="ChangeListManager">
     <list default="true" id="acb843b5-2923-41db-bc3d-a77267ea2dec" name="Default Changelist" comment="Ending of directory structure Avanza project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/Configuration.php" beforeDir="false" afterPath="$PROJECT_DIR$/Config/Configuration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/PublicServices.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/UserServices.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/MemberDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/MemberDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/HomeController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Admin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Anouncement.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Article.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Basket.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/BasketReservation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Commentary.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/CompositionBasket.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/ContainsPreparation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/EggsBoxes.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/ElementRecipe.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Event.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/File.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Fruit.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Ingredient.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Mail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/MailType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Meetings.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Member.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Other.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Participate.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Party.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/PartyActivity.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Post.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Preparation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Presentation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/QuotaPlace.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Recipe.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Reporter.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Ustensil.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Vegetable.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Workshop.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/WorkshopActivities.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/AdminDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/AdminManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/DAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Manager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/MemberDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/MemberManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/UserDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/UserManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Route/Route.php" beforeDir="false" afterPath="$PROJECT_DIR$/Route/Route.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/adminView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/AdminView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/connexionView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/ConnectionView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/joinViews.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/JoinViews.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/memberView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/MemberView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/welcomeView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/WelcomeView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/AdminView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/AdminView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/ConnectionView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/ConnectionView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/JoinViews.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/JoinView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/MemberView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/MemberView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/WelcomeView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/HomeView.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +107,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -90,11 +124,14 @@
       <recent name="C:\wamp64\www\Avanza\App\Views" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Script.Database.php">
+  <component name="RunManager" selected="PHP Script.UserManager.php">
     <configuration name="DAO.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/Model/DB/DAO.php">
       <method v="2" />
     </configuration>
     <configuration name="Database.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/Model/DB/Database.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="UserManager.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/Model/UserManager.php">
       <method v="2" />
     </configuration>
     <configuration name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/index.php">
@@ -107,6 +144,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHP Script.UserManager.php" />
         <item itemvalue="PHP Script.Database.php" />
         <item itemvalue="PHP Script.DAO.php" />
         <item itemvalue="PHP Script.index.php" />
@@ -137,6 +175,7 @@
       <workItem from="1604665413101" duration="20591000" />
       <workItem from="1604697521641" duration="2191000" />
       <workItem from="1604755595686" duration="15811000" />
+      <workItem from="1605268479725" duration="23764000" />
     </task>
     <task id="LOCAL-00001" summary="Beginning of the Avanza project">
       <created>1603816568975</created>
@@ -195,42 +234,42 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="446" y="61" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" timestamp="1604847380802" />
-    <state x="106" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604857401709">
+    <state x="106" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605268809360">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="106" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.689@0.0.1280.689" timestamp="1604857401709" />
-    <state x="371" y="92" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604849295758">
+    <state x="106" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.689@0.0.1280.689" timestamp="1605268809360" />
+    <state x="371" y="92" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605277634171">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="371" y="92" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.689@0.0.1280.689" timestamp="1604849295758" />
-    <state width="1237" height="160" key="GridCell.Tab.0.bottom" timestamp="1604428715513">
+    <state x="371" y="92" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.689@0.0.1280.689" timestamp="1605277634171" />
+    <state width="1237" height="160" key="GridCell.Tab.0.bottom" timestamp="1605287329423">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="160" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1604428715513" />
-    <state width="1237" height="160" key="GridCell.Tab.0.center" timestamp="1604428715513">
+    <state width="1237" height="160" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1605287329423" />
+    <state width="1237" height="160" key="GridCell.Tab.0.center" timestamp="1605287329423">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="160" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1604428715513" />
-    <state width="1237" height="160" key="GridCell.Tab.0.left" timestamp="1604428715513">
+    <state width="1237" height="160" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1605287329423" />
+    <state width="1237" height="160" key="GridCell.Tab.0.left" timestamp="1605287329423">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="160" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1604428715513" />
-    <state width="1237" height="160" key="GridCell.Tab.0.right" timestamp="1604428715513">
+    <state width="1237" height="160" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1605287329423" />
+    <state width="1237" height="160" key="GridCell.Tab.0.right" timestamp="1605287329423">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="160" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1604428715513" />
-    <state x="221" y="80" key="IDE.errors.dialog" timestamp="1604761920860">
+    <state width="1237" height="160" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1605287329423" />
+    <state x="221" y="80" key="IDE.errors.dialog" timestamp="1605287055404">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="221" y="80" key="IDE.errors.dialog/0.0.1280.689@0.0.1280.689" timestamp="1604761920860" />
-    <state x="465" y="52" key="NewPhpClassDialog" timestamp="1604854255266">
+    <state x="221" y="80" key="IDE.errors.dialog/0.0.1280.689@0.0.1280.689" timestamp="1605287055404" />
+    <state x="465" y="52" key="NewPhpClassDialog" timestamp="1605271748660">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="465" y="52" key="NewPhpClassDialog/0.0.1280.689@0.0.1280.689" timestamp="1604854255266" />
-    <state x="477" y="265" key="NewPhpFileDialog" timestamp="1604697647365">
+    <state x="465" y="52" key="NewPhpClassDialog/0.0.1280.689@0.0.1280.689" timestamp="1605271748660" />
+    <state x="477" y="265" key="NewPhpFileDialog" timestamp="1605269198870">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="477" y="265" key="NewPhpFileDialog/0.0.1280.689@0.0.1280.689" timestamp="1604697647365" />
+    <state x="477" y="265" key="NewPhpFileDialog/0.0.1280.689@0.0.1280.689" timestamp="1605269198870" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1603909861070">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -247,13 +286,13 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="274" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.689@0.0.1280.689" timestamp="1604857387599" />
-    <state x="297" y="153" key="run.anything.popup" timestamp="1603989147016">
+    <state x="297" y="153" key="run.anything.popup" timestamp="1605291687200">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="297" y="153" key="run.anything.popup/0.0.1280.689@0.0.1280.689" timestamp="1603989147016" />
-    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1603905560153">
+    <state x="297" y="153" key="run.anything.popup/0.0.1280.689@0.0.1280.689" timestamp="1605291687200" />
+    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1605281654979">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1603905560153" />
+    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1605281654979" />
   </component>
 </project>

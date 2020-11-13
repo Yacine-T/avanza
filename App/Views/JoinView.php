@@ -34,6 +34,6 @@
                 <input type="submit" value="s'inscrire">
             </form>
             <a href="index.php">Acceuil</a><br>
-            <a href="index.php?service=user&action=connexion">connexion</a>
+            <a href="index.php?action=connection">connexion</a>
     </body>
 </html>

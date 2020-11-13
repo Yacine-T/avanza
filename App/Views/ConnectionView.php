@@ -9,7 +9,7 @@
 </head>
     <body>
     <h1>Connexion</h1>
-        <form action="index.php?service=user&action=login" method="post">
+        <form action="index.php?action=login" method="post">
             <label for="email">Entrez votre email</label><br>
             <input type="email" placeholder="Entrez votre email" id="email" name="email">
                 <br><br>

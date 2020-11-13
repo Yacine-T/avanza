@@ -1,74 +1,96 @@
 <?php
 
-require_once("Controller/HomeController.php");
+require_once("Controller/UserController.php");
 
 class Route
 {
-    private $_controller;
+    private $_userController;
 
     /**
      * Route constructor.
-     * @param $_controller
+     * @param  $_userController
      */
     public function __construct()
     {
-        $this->_controller = new HomeController();
+        $this->_userController = new UserController();
     }
 
     public function route()
     {
-
-        if (isset($_GET['service'])) {
-            if ($_GET['service'] == 'user') {
-                if (isset($_GET['action'])) {
-                    if ($_GET['action'] == 'login') {
-                        $this->_controller->logIn($_POST['email'], $_POST['password']);
-                    } elseif ($_GET['action'] == 'logout') {
-                        $this->_controller->logOut();
-                    } elseif ($_GET['action'] == 'signup') {
-                        $this->_controller->signUp(
-                            $_POST["name"], $_POST["firstname"],
-                            $_POST["profile_picture"], $_POST["phone"],
-                            $_POST["email"], $_POST["password"], $_POST["passwordConfirmation"]);
-                    } else {
-                        $this->_controller->home();
-                    }
-                } else {
-                    $this->_controller->home();
-                }
-            }
-            else {
-                $this->_controller->home();
-            }
-
-        } else {
+        if (isset($_SESSION) && !empty($_SESSION)) {
             if (isset($_GET['action'])) {
-                if ($_GET['action'] == 'connexion') {
-                    if (isset($_SESSION) && !empty($_SESSION)) {
-                        $this->_controller->LoggedIn();
-                    }else {
-                        $this->_controller->connexion();
+                if ($_GET['action'] == "parameter") {
+                    if (isset($_GET['edit'])) {
+                        if ($_GET['edit'] == true) {
+                            if (isset(
+                                $_POST['name'],
+                                $_POST['firstname'],
+                                $_POST['profile_picture'],
+                                $_POST['phone'],
+                                $_POST['email']))
+                            $this->_userController->editUserParameters(
+                                $_SESSION['id'],
+                                $_POST['name'],
+                                $_POST['firstname'],
+                                $_POST['profile_picture'], $_POST['phone'],
+                                $_POST['email']);
+                            require_once ("Views/MemberView.php");
+                        } else {
+                            require_once("Views/MemberView.php");
+                        }
+                    } else {
+                        require_once("Views/MemberParameterView.php");
                     }
-                } elseif ($_GET['action'] == 'join') {
-                    if (isset($_SESSION) && !empty($_SESSION)) {
-                        $this->_controller->LoggedIn();
-                    }else {
-                        $this->_controller->join();
-                    }
+                } elseif ($_GET['action'] == "remove") {
+                    $this->_userController->removeAccount($_SESSION['id']);
+                }
+                elseif ($_GET['action'] == "logout") {
+                    $this->_userController->logOut();
                 }
                 else {
-                    if (isset($_SESSION) && !empty($_SESSION)) {
-                        $this->_controller->LoggedIn();
-                    }else {
-                        $this->_controller->home();
-                    }
+                    require_once("Views/MemberView.php");
                 }
             } else {
-                if (isset($_SESSION) && !empty($_SESSION)) {
-                    $this->_controller->LoggedIn();
-                }else {
-                    $this->_controller->home();
-                }            }
+                require_once("Views/MemberView.php");
+            }
+        } else {
+            if (isset($_GET['action'])) {
+                    if ($_GET['action'] == "connection") {
+                        require_once("Views/ConnectionView.php");
+                    } elseif ($_GET['action'] == "join") {
+                        require_once("Views/JoinView.php");
+                    } elseif ($_GET['action'] == "login") {
+                        $this->_userController->logIn(
+                            $_POST["email"],
+                            $_POST['password']);
+                    } elseif ($_GET['action'] == "signup") {
+                        if (isset(
+                            $_POST['name'],
+                            $_POST['firstname'],
+                            $_POST['profile_picture'],
+                            $_POST['phone'],
+                            $_POST['email'],
+                            $_POST['password'],
+                            $_POST['passwordConfirmation']))
+                            $this->_userController->createAccount(
+                                    $_POST['name'],
+                                    $_POST['firstname'],
+                                    $_POST['profile_picture'],
+                                    $_POST['phone'],
+                                    $_POST['email'],
+                                    $_POST['password'],
+                                    $_POST['passwordConfirmation']);
+                        require_once("Views/HomeView.php");
+                    } else {
+                        require_once("Views/HomeView.php");
+                    }
+
+            } else {
+                require_once("Views/HomeView.php");
+            }
+
         }
+
+
     }
 }

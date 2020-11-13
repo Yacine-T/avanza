@@ -1,9 +1,8 @@
 <?php
 
-require_once("Model/UserDAO.php");
-require_once("Entities/Member.php");
+require_once("Model/UserManager.php");
 
-class MemberDAO extends UserDAO
+class MemberManager extends UserManager
 {
     public function addMember() {
         $id = $this->getLastUserById();
