@@ -96,17 +96,27 @@ class UserController
             echo "L'email saisie est déjà utilisé, veuillez en saisir un autre !";
             exit();
         }
-
-
     }
 
-    public function editUserParameters($id, $name, $firstname, $profilePicture, $phone, $email)
+    public function editUserParameters($id, $name, $firstname, $profilePicture, $phone, $email, $password)
     {
         $userData = $this->_userManager->getAllUsers();
-        if (!$this->_userManager->email_verify($email, $userData)) {
-            $this->_userManager->updateUser($id, $name, $firstname, $profilePicture, $phone, $email);
+        if ($email != $_SESSION['email']) {
+            if (!$this->_userManager->email_verify($email, $userData)) {
+                $this->_userManager->updateUser($id, $name, $firstname, $profilePicture, $phone, $email, password_hash($password, PASSWORD_DEFAULT));
+                $_SESSION['id'] = $id;
+                $_SESSION['name'] = $name;
+                $_SESSION['firstname'] = $firstname;
+                $_SESSION['profilePicture'] = $profilePicture;
+                $_SESSION['email'] = $email;
+                $_SESSION['phone'] = $phone;
+                $_SESSION['password'] = $password;
+            } else {
+                echo "Cette adresse email est déjà utilisée. Veuillez en choisir une autre. ";
+                exit();
+            }
         } else {
-            echo "Cette adresse email est déjà utilisée. Veuillez en choisir une autre. ";
+            echo "L'adresse saisie doit être différente de celle d'origine !";
             exit();
         }
     }
@@ -115,6 +125,7 @@ class UserController
     {
         $this->_userManager->removeUser($id);
         $this->logOut();
+        exit();
     }
 
 

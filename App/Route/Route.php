@@ -33,8 +33,8 @@ class Route
                                 $_POST['name'],
                                 $_POST['firstname'],
                                 $_POST['profile_picture'], $_POST['phone'],
-                                $_POST['email']);
-                            require_once ("Views/MemberView.php");
+                                $_POST['email'], $_POST['password']);
+                            header("Location:index.php?action=parameter&edit=true");
                         } else {
                             require_once("Views/MemberView.php");
                         }

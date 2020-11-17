@@ -8,7 +8,6 @@
     <title>Document</title>
 </head>
 <body>
-
 <h1>Home</h1>
 
 <a href="index.php?action=connection">Connectez-vous</a>

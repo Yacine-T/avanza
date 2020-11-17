@@ -1,17 +1,17 @@
 Public
 
-		Consulter le contenu du site
-		Se rendre sur le CQFD/FB/Insta
-		Adhérer à l'asso en payant 3€ de frais d'adhésion
+		Consulter le contenu du site : A venir
+		Se rendre sur le CQFD/FB/Insta : en cours
+		Adhérer à l'asso en payant 3€ de frais d'adhésion: Inscription Ok mais pas le paiement
 
 Membre en plus des fonctionnalités du public qui lui sont attribués
 	Compte utilisateur
 		
-		Supprimer leurs compte
-		Modifier leurs un compte (nom, prénom etc ...)
+		Supprimer leurs compte : OK
+		Modifier leurs un compte (nom, prénom etc ...) : Ok
 
 	Post
-		Rédiger des posts
+		Rédiger des posts : en cours
 			Article
 			Recette avec des ingérdients des ustensils et des étapes à suivres
 		Commenter des posts

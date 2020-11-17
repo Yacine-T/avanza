@@ -10,7 +10,7 @@
 <body>
     <h1>Paramètres de <?= $_SESSION['name'] . " " . $_SESSION['firstname']?></h1>
     <br>
-    <form action="index.php?action=parameter&edit=true" method="post">
+    <form action="index.php" method="post">
         <label for="name">Entrez votre nom</label><br>
         <input type="text"  id="name" name="name" value="<?= $_SESSION['name']?>" required>
         <br>
@@ -25,6 +25,9 @@
         <br>
         <label for="email">Entrez votre email</label><br>
         <input type="email" id="email" name="email" value="<?= $_SESSION['email']?>" required>
+        <br>
+        <label for="password">Entrez votre mot de passe :</label><br>
+        <input type="password" placeholder="Entrez votre password" id="password" name="password" required>
         <br><br>
         <input type="submit" value="Retour">
         <input type="submit" value="Modifier">

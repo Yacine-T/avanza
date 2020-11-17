@@ -23,12 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="acb843b5-2923-41db-bc3d-a77267ea2dec" name="Default Changelist" comment="Ending of directory structure Avanza project">
+      <change beforePath="$PROJECT_DIR$/../Analyse/Note_divers/Besoins_utilisateurs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Analyse/Note_divers/Besoins_utilisateurs.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/AdminManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/AdminManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/MemberManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/MemberManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/UserManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Route/Route.php" beforeDir="false" afterPath="$PROJECT_DIR$/Route/Route.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/HomeView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/HomeView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/MemberParameterView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/MemberParameterView.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,6 +139,9 @@
       <workItem from="1604755595686" duration="15811000" />
       <workItem from="1605268479725" duration="23764000" />
       <workItem from="1605296650426" duration="2453000" />
+      <workItem from="1605462427566" duration="8000" />
+      <workItem from="1605534519459" duration="5000" />
+      <workItem from="1605637183429" duration="5490000" />
     </task>
     <task id="LOCAL-00001" summary="Beginning of the Avanza project">
       <created>1603816568975</created>
@@ -220,10 +224,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state width="1237" height="160" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1605287329423" />
-    <state x="221" y="80" key="IDE.errors.dialog" timestamp="1605287055404">
+    <state x="221" y="80" key="IDE.errors.dialog" timestamp="1605641408622">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="221" y="80" key="IDE.errors.dialog/0.0.1280.689@0.0.1280.689" timestamp="1605287055404" />
+    <state x="221" y="80" key="IDE.errors.dialog/0.0.1280.689@0.0.1280.689" timestamp="1605641408622" />
     <state x="465" y="52" key="NewPhpClassDialog" timestamp="1605271748660">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -248,10 +252,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="274" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.689@0.0.1280.689" timestamp="1604857387599" />
-    <state x="297" y="153" key="run.anything.popup" timestamp="1605296738828">
+    <state x="297" y="153" key="run.anything.popup" timestamp="1605637274540">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="297" y="153" key="run.anything.popup/0.0.1280.689@0.0.1280.689" timestamp="1605296738828" />
+    <state x="297" y="153" key="run.anything.popup/0.0.1280.689@0.0.1280.689" timestamp="1605637274540" />
     <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1605298855751">
       <screen x="0" y="0" width="1280" height="689" />
     </state>

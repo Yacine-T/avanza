@@ -38,8 +38,8 @@ class UserManager extends Manager
         return $status;
     }
 
-    public function updateUser($id, $name, $firstname, $profilePicture, $phone, $email) {
-        $data = ["`name` = " . "'$name'", "`firstname` = " . "'$firstname'", "`profile_picture` = " . "'$profilePicture'", "`phone` = " . "'$phone'", "`email` = " . "'$email'"];
+    public function updateUser($id, $name, $firstname, $profilePicture, $phone, $email, $password) {
+        $data = ["`name` = " . "'$name'", "`firstname` = " . "'$firstname'", "`profile_picture` = " . "'$profilePicture'", "`phone` = " . "'$phone'", "`email` = " . "'$email'", "`password` = " . "'$password'"];
         $conditions = ["`id` = " . "$id"];
         $this->update("`users`", $data, $conditions);
     }
@@ -51,8 +51,8 @@ class UserManager extends Manager
 
     public function email_verify($emailUser, array $emails) {
         $res = false;
-        foreach ($emails as $email) {
-            if ($email == $emailUser){
+        foreach ($emails as $userEmail) {
+            if ($userEmail == $emailUser){
                 $res = true;
             }
         }
