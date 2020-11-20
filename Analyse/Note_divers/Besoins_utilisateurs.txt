@@ -1,7 +1,7 @@
 Public
 
 		Consulter le contenu du site : A venir
-		Se rendre sur le CQFD/FB/Insta : en cours
+		Se rendre sur le CQFD/FB/Insta : ok
 		Adhérer à l'asso en payant 3€ de frais d'adhésion: Inscription Ok mais pas le paiement
 
 Membre en plus des fonctionnalités du public qui lui sont attribués

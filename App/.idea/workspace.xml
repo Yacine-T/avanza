@@ -23,7 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="acb843b5-2923-41db-bc3d-a77267ea2dec" name="Default Changelist" comment="Ending of directory structure Avanza project">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Analyse/Note_divers/Besoins_utilisateurs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Analyse/Note_divers/Besoins_utilisateurs.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/HomeView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/HomeView.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -139,7 +139,7 @@
       <workItem from="1605534519459" duration="5000" />
       <workItem from="1605637183429" duration="5490000" />
       <workItem from="1605644942301" duration="8000" />
-      <workItem from="1605867682391" duration="3888000" />
+      <workItem from="1605867682391" duration="4284000" />
     </task>
     <task id="LOCAL-00001" summary="Beginning of the Avanza project">
       <created>1603816568975</created>
@@ -162,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603816918046</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Ending of directory structure Avanza project">
+      <created>1605873019633</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1605873019633</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,10 +249,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1280.689@0.0.1280.689" timestamp="1604065744500" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1603816922033">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1605873087780">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1603816922033" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1605873087780" />
     <state x="274" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1604857387599">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
