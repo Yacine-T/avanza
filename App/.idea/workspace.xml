@@ -23,13 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="acb843b5-2923-41db-bc3d-a77267ea2dec" name="Default Changelist" comment="Ending of directory structure Avanza project">
-      <change beforePath="$PROJECT_DIR$/../Analyse/Note_divers/Besoins_utilisateurs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Analyse/Note_divers/Besoins_utilisateurs.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/UserManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Route/Route.php" beforeDir="false" afterPath="$PROJECT_DIR$/Route/Route.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/HomeView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/HomeView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/MemberParameterView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/MemberParameterView.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +57,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Model/Member" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -74,16 +69,17 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\Avanza\App" />
+      <recent name="C:\wamp64\www\Avanza\App\Model\Member" />
+      <recent name="C:\wamp64\www\Avanza\App\Views" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\Avanza\App\Views" />
       <recent name="C:\wamp64\www\Avanza\App\Model" />
       <recent name="C:\wamp64\www\Avanza\App\Model\DB" />
       <recent name="C:\wamp64\www\Avanza\App\Model\User" />
       <recent name="C:\wamp64\www\Avanza\App\Model\Admin" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\Avanza\App\Model\Member" />
-      <recent name="C:\wamp64\www\Avanza\App\Views" />
     </key>
   </component>
   <component name="RunManager" selected="PHP Script.UserManager.php">
@@ -142,6 +138,8 @@
       <workItem from="1605462427566" duration="8000" />
       <workItem from="1605534519459" duration="5000" />
       <workItem from="1605637183429" duration="5490000" />
+      <workItem from="1605644942301" duration="8000" />
+      <workItem from="1605867682391" duration="3888000" />
     </task>
     <task id="LOCAL-00001" summary="Beginning of the Avanza project">
       <created>1603816568975</created>
