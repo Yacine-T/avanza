@@ -1,0 +1,4 @@
+Bug à corriger : Notice: Array to string conversion in C:\wamp64\www\Avanza\App\Model\Manager.php on line 53
+Lors de la redirection vers la page d'accueil après s'être inscris
+
+Vérification de l'extension des fichiers pour chacun des uploader
