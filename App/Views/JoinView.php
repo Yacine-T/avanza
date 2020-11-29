@@ -5,35 +5,46 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sign up</title>
+    <title>Inscription</title>
 </head>
     <body>
-    <h1>Inscription</h1>
+    <header>
+        <h1>Inscription</h1>
+    </header>
             <form action="index.php?action=signup" method="post">
-                <label for="name">Entrez votre nom</label><br>
-                <input type="text" placeholder="Entrez votre nom" id="name" name="name" required>
+
+                <input type="text" placeholder="Nom" id="name" name="name" required>
                     <br>
-                <label for="firstname">Entrez votre prenom</label><br>
-                <input type="text" placeholder="Entrez votre prenom" id="firstname" name="firstname" required>
                     <br>
-                <label for="profilePicture">Uploder une image de profile</label><br>
-                <input type="file" placeholder="Uploder une image de profile" id="profile_picture" name="profile_picture">
+                <input type="text" placeholder="Entrez Prenom" id="firstname" name="firstname" required>
                     <br>
-                <label for="phone">Entrez votre numéro de téléphone</label><br>
-                <input type="text" maxlength="10" placeholder="Entrez votre numéro de téléphone" id="phone" name="phone" required>
                     <br>
-                <label for="email">Entrez votre email</label><br>
-                <input type="email" placeholder="Entrez votre email" id="email" name="email" required>
+                <input type="file" id="profile_picture" name="profile_picture">
                     <br>
-                <label for="password">Entrez votre mot de passe :</label><br>
-                <input type="password" placeholder="Entrez votre password" id="password" name="password" required>
                     <br>
-                <label for="passwordConfirmation">Confirmez votre mot de passe :</label><br>
-                <input type="password" placeholder="Confirmez votre mot de passe " id=passwordConfirmation" name="passwordConfirmation" required>
+                <input type="text" maxlength="10" placeholder="Numéro de téléphone" id="phone" name="phone" required>
+                    <br>
+                    <br>
+                <input type="email" placeholder="Email" id="email" name="email" required>
+                    <br>
+                    <br>
+                <input type="password" placeholder="Mot de passe" id="password" name="password" required>
+                    <br>
+                    <br>
+                <input type="password" placeholder="Confirmation du mot de passe " id=passwordConfirmation" name="passwordConfirmation" required>
+                    <br>
+                    <br>
+                <p>Comment souhaitez-vous régler vos frais d'adhésion ? </p>
+                <label for="payment">En ligne</label>
+                <input type="radio" id="payment" name="payment" value="En ligne" required>
+                <label for="payment">Sur place</label>
+                <input type="radio" id=payment" name="payment" value="Sur place" required>
+                    <br>
                     <br>
                 <input type="submit" value="s'inscrire">
             </form>
-            <a href="index.php">Acceuil</a><br>
+            <br>
+            <a href="index.php">Acceuil</a>
             <a href="index.php?action=connection">connexion</a>
     </body>
 </html>

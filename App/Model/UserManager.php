@@ -5,23 +5,25 @@ require_once("Manager.php");
 class UserManager extends Manager
 {
 
-    public function addUser($name, $firstname, $profilePicture, $phone, $email, $password)
+    public function addUser($name, $firstname, $profilePicture, $phone, $email, $password, $payment)
     {
-        $column = ["name", "firstname", "profile_picture", "phone", "email", "password"];
-        $values = ["'$name'", "'$firstname'", "'$profilePicture'", "'$phone'", "'$email'", "'$password'"];
-        $this->insert("users", $column, $values);
+        $columns = ["name", "firstname", "profile_picture", "phone", "email", "password", "payment_method"];
+        $values = ["'$name'", "'$firstname'", "'$profilePicture'", "'$phone'", "'$email'", "'$password'", "'$payment'"];
+        $this->insert("users", $columns, $values);
     }
 
     public function getLastUserById()
     {
         $sql = "SELECT id FROM `users` order by creation_date desc LIMIT 1";
-        return $this->queryRow($sql);
+        $lastUser = $this->queryAll($sql);
+
+        return $lastUser;
     }
 
-    public function getAllUsers()
+    public function getUsersDatasByEmail($email)
     {
-        $sql = "SELECT * FROM `users`";
-        $users = $this->queryRow($sql);
+        $sql = "SELECT * FROM `users` WHERE email = ? ";
+        $users = $this->queryRow($sql, $email);
 
         return $users;
     }
@@ -29,12 +31,8 @@ class UserManager extends Manager
     public function getUserStatus($email)
     {
         $sql = "SELECT * FROM `users`, `members` WHERE users.id=members.user and email = ?";
-        $userStatus = $this->queryRow($sql, $email);
-        if ($userStatus == true) {
-            $status = "member";
-        } else {
-            $status = "admin";
-        }
+        $status = $this->queryRow($sql, $email);
+
         return $status;
     }
 
@@ -49,15 +47,11 @@ class UserManager extends Manager
         $this->delete("`users`", $conditions);
     }
 
-    public function email_verify($emailUser, array $emails) {
-        $res = false;
-        foreach ($emails as $userEmail) {
-            if ($userEmail == $emailUser){
-                $res = true;
-            }
-        }
+    public function email_verify($email) {
+        $sql = "SELECT COUNT(*) as nbUsers FROM `users` WHERE email = ?";
+        $rows =  $this->queryRow($sql, $email);
 
-        return $res;
+        return $rows;
     }
 
 }

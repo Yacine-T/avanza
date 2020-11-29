@@ -9,4 +9,9 @@ class MemberManager extends UserManager
         $column = ["user"];
         $this->insert("members", $column, $id);
     }
+
+    public function removeMember($id) {
+        $conditions = ["`user` = " . $id];
+        $this->delete("`members`", $conditions);
+    }
 }

@@ -21,10 +21,10 @@ class UserController
 
     public function logIn($email, $password)
     {
-        $userData = $this->_userManager->getAllUsers();
+        $userData = $this->_userManager->getUsersDatasByEmail($email);
         $userStatus = $this->_userManager->getUserStatus($email);
-
-        if ($this->_userManager->email_verify($email, $userData)) {
+        $emailVerify = $this->_userManager->email_verify($email);
+        if ($emailVerify > 0) {
             if (isset($userData["password"]) && password_verify($password, $userData["password"])) {
                 if (isset($userData["account_verified"]) && $userData["account_verified"] == true) {
                     $_SESSION = $userData;
@@ -52,7 +52,6 @@ class UserController
             $_SESSION = array();
             session_destroy();
             unset($_SESSION);
-            exit();
         } else {
             echo "Vous n'êtes pas encore connecté !";
             exit();
@@ -68,24 +67,23 @@ class UserController
         }
     }
 
-    public function createAccount($name, $firstname, $profilePicture, $phone, $email, $password, $passwordConfirmation)
+    public function createAccount($name, $firstname, $profilePicture, $phone, $email, $password, $passwordConfirmation, $payment)
     {
-        $userData = $this->_userManager->getAllUsers();
-        if (!$this->_userManager->email_verify($email, $userData)) {
+        $userData = $this->_userManager->getUsersDatasByEmail($email);
+        $emailVerify = $this->_userManager->email_verify($email);
+        if ($emailVerify['nbUsers'] == 0) {
             if (preg_match("/^0[1-9]([0-9]{2}){4}$/", $phone)) {
                 if (preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@\/+=!?&*#<>_]).{8,}$/", $password)) {
                     if ($password == $passwordConfirmation) {
-                        $this->_userManager->addUser($name, $firstname, $profilePicture, $phone, $email, password_hash($password, PASSWORD_DEFAULT));
+                        $this->_userManager->addUser($name, $firstname, $profilePicture, $phone, $email, password_hash($password, PASSWORD_DEFAULT), $payment);
                         $this->_memberManager->addMember();
-                        header("Location:index.php?action=connection");
-                        exit();
                     } else {
                         echo "Les mots de passe ne se correspondent pas, veuillez réssayer s'il vous plaît !";
                         exit();
                     }
                 } else {
                     echo "Votre mot de passe doit contenir au moins un chiffre, une lettre minuscule, une majuscule ainsi qu'un 
-                     symbole spéciale et être d'une longueur supérieure à 8 caractères !";
+                     symbole spéciale et être d'une longueur supérieure ou égale à 8 caractères !";
                     exit();
                 }
             } else {
@@ -100,9 +98,10 @@ class UserController
 
     public function editUserParameters($id, $name, $firstname, $profilePicture, $phone, $email, $password)
     {
-        $userData = $this->_userManager->getAllUsers();
+        $userData = $this->_userManager->getUsersDatasByEmail($email);
+        $emailVerify = $this->_userManager->email_verify($email);
         if ($email != $_SESSION['email']) {
-            if (!$this->_userManager->email_verify($email, $userData)) {
+            if ($emailVerify == 0) {
                 $this->_userManager->updateUser($id, $name, $firstname, $profilePicture, $phone, $email, password_hash($password, PASSWORD_DEFAULT));
                 $_SESSION['id'] = $id;
                 $_SESSION['name'] = $name;
@@ -124,8 +123,8 @@ class UserController
     public function removeAccount($id)
     {
         $this->_userManager->removeUser($id);
+        $this->_memberManager->removeMember($id);
         $this->logOut();
-        exit();
     }
 
 

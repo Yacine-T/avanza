@@ -1,8 +1,8 @@
 Public
 
-		Consulter le contenu du site : A venir
+		Consulter le contenu du site : ok
 		Se rendre sur le CQFD/FB/Insta : ok
-		Adhérer à l'asso en payant 3€ de frais d'adhésion: Inscription Ok mais pas le paiement
+		Adhérer à l'asso en payant 3€ de frais d'adhésion: ok
 
 Membre en plus des fonctionnalités du public qui lui sont attribués
 	Compte utilisateur
@@ -12,7 +12,7 @@ Membre en plus des fonctionnalités du public qui lui sont attribués
 
 	Post
 		Rédiger des posts : en cours
-			Article
+			Article : ok
 			Recette avec des ingérdients des ustensils et des étapes à suivres
 		Commenter des posts
 		Noter des recttes

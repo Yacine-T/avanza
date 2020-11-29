@@ -8,7 +8,9 @@
     <title>Paramètre</title>
 </head>
 <body>
+<header>
     <h1>Paramètres de <?= $_SESSION['name'] . " " . $_SESSION['firstname']?></h1>
+</header>
     <br>
     <form action="index.php" method="post">
         <label for="name">Entrez votre nom</label><br>

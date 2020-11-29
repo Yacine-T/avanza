@@ -9,4 +9,9 @@ class AdminManager extends UserManager
         $column = ["user"];
         $this->insert("admins", $column, $id);
     }
+
+    public function removeAdmin($id) {
+        $conditions = ["`user` = " . $id];
+        $this->delete("`admins`", $conditions);
+    }
 }

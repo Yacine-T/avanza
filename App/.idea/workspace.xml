@@ -22,9 +22,21 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acb843b5-2923-41db-bc3d-a77267ea2dec" name="Default Changelist" comment="Ending of directory structure Avanza project">
+    <list default="true" id="acb843b5-2923-41db-bc3d-a77267ea2dec" name="Default Changelist" comment="Ajout des icone anvec les liens de redirection vers les comptes FB, insta de l'asso et le cqfd">
       <change beforePath="$PROJECT_DIR$/../Analyse/Note_divers/Besoins_utilisateurs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Analyse/Note_divers/Besoins_utilisateurs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/AdminManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/AdminManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Manager.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Manager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/MemberManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/MemberManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/UserManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Route/Route.php" beforeDir="false" afterPath="$PROJECT_DIR$/Route/Route.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/AdminView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/AdminView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/ConnectionView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/ConnectionView.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/HomeView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/HomeView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/JoinView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/JoinView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/MemberParameterView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/MemberParameterView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/MemberView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/MemberView.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,17 +81,17 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\Avanza\App" />
-      <recent name="C:\wamp64\www\Avanza\App\Model\Member" />
-      <recent name="C:\wamp64\www\Avanza\App\Views" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\Avanza\App\Views" />
       <recent name="C:\wamp64\www\Avanza\App\Model" />
       <recent name="C:\wamp64\www\Avanza\App\Model\DB" />
       <recent name="C:\wamp64\www\Avanza\App\Model\User" />
       <recent name="C:\wamp64\www\Avanza\App\Model\Admin" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\Avanza\App" />
+      <recent name="C:\wamp64\www\Avanza\App\Model\Member" />
+      <recent name="C:\wamp64\www\Avanza\App\Views" />
     </key>
   </component>
   <component name="RunManager" selected="PHP Script.UserManager.php">
@@ -139,7 +151,10 @@
       <workItem from="1605534519459" duration="5000" />
       <workItem from="1605637183429" duration="5490000" />
       <workItem from="1605644942301" duration="8000" />
-      <workItem from="1605867682391" duration="4284000" />
+      <workItem from="1605867682391" duration="4357000" />
+      <workItem from="1606050422369" duration="11756000" />
+      <workItem from="1606478452891" duration="346000" />
+      <workItem from="1606478868173" duration="33756000" />
     </task>
     <task id="LOCAL-00001" summary="Beginning of the Avanza project">
       <created>1603816568975</created>
@@ -169,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605873019633</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Ajout des icone anvec les liens de redirection vers les comptes FB, insta de l'asso et le cqfd">
+      <created>1605873351785</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1605873351785</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,21 +212,26 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Beginning of the Avanza project" />
     <MESSAGE value="Ending of directory structure Avanza project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ending of directory structure Avanza project" />
+    <MESSAGE value="Ajout des icone anvec les liens de redirection vers les comptes FB, insta de l'asso et le cqfd" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout des icone anvec les liens de redirection vers les comptes FB, insta de l'asso et le cqfd" />
   </component>
   <component name="WindowStateProjectService">
     <state x="393" y="165" key="#Notifications" timestamp="1603826312675">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="393" y="165" key="#Notifications/0.0.1280.689@0.0.1280.689" timestamp="1603826312675" />
+    <state x="80" y="181" key="#SQL_Dialects" timestamp="1606065577840">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="80" y="181" key="#SQL_Dialects/0.0.1280.689@0.0.1280.689" timestamp="1606065577840" />
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603909928477">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.689@0.0.1280.689" timestamp="1603909928477" />
-    <state x="446" y="61" key="#com.intellij.ide.util.MemberChooser" timestamp="1604847380802">
+    <state x="446" y="61" key="#com.intellij.ide.util.MemberChooser" timestamp="1606662730676">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="446" y="61" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" timestamp="1604847380802" />
+    <state x="446" y="61" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" timestamp="1606662730676" />
     <state x="106" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605268809360">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -229,18 +256,18 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state width="1237" height="160" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1605287329423" />
-    <state x="221" y="80" key="IDE.errors.dialog" timestamp="1605641408622">
+    <state x="221" y="80" key="IDE.errors.dialog" timestamp="1606657094595">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="221" y="80" key="IDE.errors.dialog/0.0.1280.689@0.0.1280.689" timestamp="1605641408622" />
-    <state x="465" y="52" key="NewPhpClassDialog" timestamp="1605271748660">
+    <state x="221" y="80" key="IDE.errors.dialog/0.0.1280.689@0.0.1280.689" timestamp="1606657094595" />
+    <state x="465" y="52" key="NewPhpClassDialog" timestamp="1606068105878">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="465" y="52" key="NewPhpClassDialog/0.0.1280.689@0.0.1280.689" timestamp="1605271748660" />
-    <state x="477" y="265" key="NewPhpFileDialog" timestamp="1605269198870">
+    <state x="465" y="52" key="NewPhpClassDialog/0.0.1280.689@0.0.1280.689" timestamp="1606068105878" />
+    <state x="477" y="265" key="NewPhpFileDialog" timestamp="1606646811074">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="477" y="265" key="NewPhpFileDialog/0.0.1280.689@0.0.1280.689" timestamp="1605269198870" />
+    <state x="477" y="265" key="NewPhpFileDialog/0.0.1280.689@0.0.1280.689" timestamp="1606646811074" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1603909861070">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -249,18 +276,18 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1280.689@0.0.1280.689" timestamp="1604065744500" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1605873087780">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1605873354204">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1605873087780" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1605873354204" />
     <state x="274" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1604857387599">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="274" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.689@0.0.1280.689" timestamp="1604857387599" />
-    <state x="297" y="153" key="run.anything.popup" timestamp="1605637274540">
+    <state x="297" y="153" key="run.anything.popup" timestamp="1606664301142">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="297" y="153" key="run.anything.popup/0.0.1280.689@0.0.1280.689" timestamp="1605637274540" />
+    <state x="297" y="153" key="run.anything.popup/0.0.1280.689@0.0.1280.689" timestamp="1606664301142" />
     <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1605298855751">
       <screen x="0" y="0" width="1280" height="689" />
     </state>

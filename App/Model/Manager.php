@@ -50,7 +50,7 @@ class Manager
     public function insert($table, array $columns, array $values) {
             $sql = "INSERT INTO " . $table .
                     " (" . implode(',' , $columns) . " ) 
-                    VALUES " . "(" . implode(',' , $values) . ")";
+                    VALUES (" . implode(',' , $values) . ")";
             $this->request($sql);
     }
 
