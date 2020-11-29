@@ -31,15 +31,16 @@ Membre en plus des fonctionnalités du public qui lui sont attribués
 			Réunion
 		Annuler leurs réservation
 		Rapporter une réunion
-	Mail
-		Envoyer des mails sur le support
-		Recevoir des mails de Avanza
 
 	Panier
 		Réserver un certains nombre de panier panier
 			Avec fruits
 			Légumes
 			Oeufs (optionnel)
+	Mail
+		Envoyer des mails sur le support
+		Recevoir des mails de Avanza
+
 
 Admin en plus des fonctionnalités des admins qui lui sont attribués
 
