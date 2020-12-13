@@ -1,4 +1,10 @@
 Bug à corriger : Notice: Array to string conversion in C:\wamp64\www\Avanza\App\Model\Manager.php on line 53
 Lors de la redirection vers la page d'accueil après s'être inscris
 
-Vérification de l'extension des fichiers pour chacun des uploader
+Vérification de l'extension des fichiers pour chacun des uploader pour savoir si le fichier uploader est bien
+une image
+
+Créé une table theme qui pour un article fait correspondre au moins un theme. Cette table sera lié au champs
+Article et non à la table post adapter la route en fonction de cela
+Ex : un artcile sur le ewaste peut être associé au theme de la science, de l'écologie et de la technologie
+

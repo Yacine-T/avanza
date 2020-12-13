@@ -5,18 +5,21 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Rédiger une publication</title>
+    <title>Rédiger un article</title>
 </head>
 <body>
     <header>
             <h1>Rédiger un article</h1>
         <br>
-            <a href="index.php">Accueil</a>
+            <a href='index.php?action=post&post=article'>Rédiger un article </a>
+            <a href='index.php?action=post&post=recipe'>Composer une recette </a>
+            <a href='index.php?action=parameter'>Paramètre</a>
+            <a href='index.php?action=logout'>Déconnexion</a>
         <br>
         <br>
     </header>
 
-    <form action="index.php?action=article&post=true" method="post">
+    <form action="index.php?action=article&edit=true" method="post">
 
         <input type="text" placeholder="Titre" id="title" name="title" required>
         <br>

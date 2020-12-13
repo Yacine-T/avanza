@@ -50,30 +50,40 @@ class Route
                 } elseif ($_GET['action'] == "logout") {
                     $this->_userController->logOut();
                     require_once("Views/HomeView.php");
-                } elseif ($_GET["action"] == "article") {
-                    if (isset($_GET["post"]) && $_GET["post"] == true) {
-                        if(isset(
-                            $_POST['title'],
-                            $_POST['topics'],
-                            $_POST['content'],
-                            $_POST['image']))
-                        {
-                            $topics = implode(",", $_POST['topics']);
-                            $this->_postController->writePost(
-                                $_SESSION["id"],
-                                $_POST['title'],
-                                $topics,
-                                $_POST['content'],
-                                $_POST['image']);
-                            header("Location:index.php");
-                        } else {
-                            require_once("Views/WriteArticleView.php");
+                } elseif ($_GET["action"] == "post") {
+                    if (isset($_GET["post"])) {
+                        if ($_GET["post"] == "article") {
+                            if (isset($_GET['edit']) && $_GET['edit'] == true) {
+                                if(isset(
+                                    $_POST['title'],
+                                    $_POST['topics'],
+                                    $_POST['content'],
+                                    $_POST['image']))
+                                {
+                                    $topics = implode(",", $_POST['topics']);
+                                    $this->_postController->writePost(
+                                        $_SESSION["id"],
+                                        $_POST['title'],
+                                        $topics,
+                                        $_POST['content'],
+                                        $_POST['image']);
+                                    header("Location:index.php");
+                                } else {
+                                    require_once("Views/WriteArticleView.php");
+                                }
+                            } else {
+                                require_once("Views/WriteArticleView.php");
+                            }
+
+                        } elseif ($_GET["post"] == "recipe") {
+                            require_once("Views/ComposeRecipeView.php");
+                        } else{
+                            require_once("Views/MemberView.php");
                         }
-                    }  else {
-                        require_once("Views/WriteArticleView.php");
+
+                    } else {
+                        require_once("Views/MemberView.php");
                     }
-                } elseif ($_GET['action'] == "recipe") {
-                    require_once("Views/ComposeRecipeView.php");
                 } else {
                     require_once("Views/MemberView.php");
                 }
