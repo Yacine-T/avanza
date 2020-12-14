@@ -2,20 +2,25 @@
 
 require_once("Controller/UserController.php");
 require_once("Controller/PostController.php");
+require_once("Controller/RecipeController.php");
 
 class Route
 {
     private $_userController;
     private $_postController;
+    private $_recipeController;
 
     /**
      * Route constructor.
      * @param  $_userController
+     * @param  $_postController
+     * @param  $_recipeController
      */
     public function __construct()
     {
         $this->_userController = new UserController();
         $this->_postController = new PostController();
+        $this->_recipeController = new RecipeController();
     }
 
     public function route()
@@ -62,9 +67,8 @@ class Route
                                 {
                                     $topics = implode(",", $_POST['topics']);
                                     $this->_postController->writePost(
-                                        $_SESSION["id"],
+                                        $_SESSION['id'],
                                         $_POST['title'],
-                                        $topics,
                                         $_POST['content'],
                                         $_POST['image']);
                                     header("Location:index.php");
@@ -76,7 +80,53 @@ class Route
                             }
 
                         } elseif ($_GET["post"] == "recipe") {
-                            require_once("Views/ComposeRecipeView.php");
+                            if (isset($_GET["step"])) {
+                                if ($_GET["step"] == "one") {
+                                    require_once("Views/StepOneComposeRecipeView.php");
+                                } elseif ($_GET["step"] == "two" && isset(
+                                        $_POST['title'],
+                                        $_POST['description'],
+                                        $_POST['image'],
+                                        $_POST['nbGuest'],
+                                        $_POST['prepTime'],
+                                        $_POST['difficulty'])) {
+                                    $_SESSION['recipe']['author'] = $_SESSION['name'] . " " . $_SESSION['firstname'];
+                                    $_SESSION['recipe']['authorId'] = $_SESSION['id'];
+                                    $_SESSION['recipe']['title'] = $_POST['title'];
+                                    $_SESSION['recipe']['description'] = $_POST['description'];
+                                    $_SESSION['recipe']['image'] = $_POST['image'];
+                                    $_SESSION['recipe']['nbGuest'] = $_POST['nbGuest'];
+                                    $_SESSION['recipe']['prepTime'] = $_POST['prepTime'];
+                                    $_SESSION['recipe']['difficulty'] = $_POST['difficulty'];
+                                    require_once("Views/StepTwoComposeRecipeView.php");
+                                } elseif ($_GET["step"] == "three" && isset($_POST['firstIngredient'])) {
+                                    $_SESSION['recipe']['ingredient'] = $_POST['firstIngredient'];
+                                    require_once("Views/StepThreeComposeRecipeView.php");
+                                } elseif ($_GET["step"] == "four" && isset($_POST['firstUstensils'])) {
+                                    $_SESSION['recipe']['ustensils'] = $_POST['firstUstensils'];
+                                        require_once ("Views/StepFourComposeRecipeView.php");
+                                } elseif ($_GET["step"] == "five"){
+                                    if (isset($_POST['firstStep'])) {
+                                        $_SESSION['recipe']['steps'] = $_POST['firstStep'];
+                                        require_once ("Views/StepFiveComposeRecipeView.php");
+                                    } else {
+                                        require_once ("Views/StepFourComposeRecipeView.php");
+                                    }
+                                } elseif (isset($_GET['step']) == "six"){
+                                    $this->_recipeController->composeRecipe(
+                                        $_SESSION['recipe']['authorId'],
+                                        $_SESSION['recipe']['title'],
+                                        $_SESSION['recipe']['description'],
+                                        $_SESSION['recipe']['image'],
+                                        $_SESSION['recipe']['nbGuest'],
+                                        $_SESSION['recipe']['prepTime'],
+                                        $_SESSION['recipe']['difficulty']);
+                                } else {
+                                    require_once("Views/StepOneComposeRecipeView.php");
+                                }
+                            } else {
+                                require_once("Views/MemberView.php");
+                            }
                         } else{
                             require_once("Views/MemberView.php");
                         }

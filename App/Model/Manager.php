@@ -51,7 +51,7 @@ class Manager
             $sql = "INSERT INTO " . $table .
                     " (" . implode(',' , $columns) . " ) 
                     VALUES (" . implode(',' , $values) . ")";
-            $this->request($sql);
+            echo $sql;
     }
 
 

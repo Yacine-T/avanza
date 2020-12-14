@@ -19,7 +19,7 @@
         <br>
     </header>
 
-    <form action="index.php?action=article&edit=true" method="post">
+    <form action="index.php?action=post&post=article&step=two" method="post">
 
         <input type="text" placeholder="Titre" id="title" name="title" required>
         <br>

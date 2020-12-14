@@ -4,6 +4,7 @@ require_once ("Model/Manager.php");
 
 class PostManager extends Manager
 {
+
     public function selectAllPosts() {
         $sql = "SELECT * FROM posts";
         return $this->queryAll($sql);
@@ -14,10 +15,15 @@ class PostManager extends Manager
         return $this->queryRow($sql);
     }
 
-    public function createPost($author, $title, $theme, $content, $image) {
+    public function selectLastPost(){
+        $sql = "SELECT id FROM `posts` ORDER BY DESC LIMIT 1";
+        return $this->queryAll($sql);
+    }
 
-            $columns = ["`author`", "`title`", "`theme`", "`content`", "`image`"];
-            $values = [$author, "'$title'", "'$theme'", "\"$content\"", "'$image'"];
+    public function createPost($author, $title, $content, $image) {
+
+            $columns = ["`author`", "`title`", "`content`", "`image`"];
+            $values = ["'$author'", "'$title'", "\"$content\"", "'$image'"];
 
             $this->insert("posts", $columns, $values);
     }

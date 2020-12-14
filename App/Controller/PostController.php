@@ -18,8 +18,8 @@ class PostController
 
     public function showAllPosts() {}
     public function showOnePosts($id) {}
-    public function writePost($author, $title, $theme, $content, $image) {
-        $this->postManager->createPost($author, $title, $theme, $content, $image);
+    public function writePost($author, $title, $content, $image) {
+        $this->postManager->createPost($author, $title, $content, $image);
     }
     public function editPost($id, $author, $title, $theme, $content, $mainImage, $imageC1, $imageC2){} // for the admins only
     public function removePost($id){} // for the admins only

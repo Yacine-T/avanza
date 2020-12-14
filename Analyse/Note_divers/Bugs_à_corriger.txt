@@ -8,3 +8,13 @@ Créé une table theme qui pour un article fait correspondre au moins un theme. 
 Article et non à la table post adapter la route en fonction de cela
 Ex : un artcile sur le ewaste peut être associé au theme de la science, de l'écologie et de la technologie
 
+Rajouter une page Recap pour les articles que l'on veut rédiger
+
+Créer un controller ArticleController pour plus de modularité et le faire hérité de PostController pour qu'il est des
+opération propre aux article et que l'architecture soit plus propre
+
+pouvoir composer une recette erreur : 
+Fatal error: Uncaught Error: 
+Call to a member function createPost() on null in C:\wamp64\www\Avanza\App\Controller\PostController.php:22 Stack trace: #0 C:\wamp64\www\Avanza\App\Controller\RecipeController.php(22): 
+PostController->writePost('1', 'Lorem ipsum', ' Le lore...', 'photo_de_profil...') #1 C:\wamp64\www\Avanza\App\Route\Route.php(123): 
+RecipeController->composeRecipe('1', 'Lorem ipsum', ' Le lore...', 'photo_de_profil...', '5', '30', 'Expert') #2 C:\wamp64\www\Avanza\App\index.php(11): Route->route() #3 {main} thrown in C:\wamp64\www\Avanza\App\Controller\PostController.php on line 22

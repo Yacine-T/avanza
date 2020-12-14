@@ -36,7 +36,7 @@
     </form>
     <a href="index.php">Acceuil</a>
     <a href="index.php?action=remove">Supprimer</a>
-    <a href="index.php?action=post&post=recipe">Composer une recette</a>
+    <a href="index.php?action=post&post=recipe&step=one">Composer une recette</a>
     <a href="index.php?action=logout">Déconnexion</a>
 </body>
 </html>

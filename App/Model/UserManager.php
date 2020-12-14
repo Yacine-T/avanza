@@ -12,7 +12,7 @@ class UserManager extends Manager
         $this->insert("users", $columns, $values);
     }
 
-    public function getLastUserById()
+    public function getLastUserId()
     {
         $sql = "SELECT id FROM `users` order by creation_date desc LIMIT 1";
         $lastUser = $this->queryAll($sql);

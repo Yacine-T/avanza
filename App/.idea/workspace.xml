@@ -23,8 +23,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="acb843b5-2923-41db-bc3d-a77267ea2dec" name="Default Changelist" comment="Ajout des icone anvec les liens de redirection vers les comptes FB, insta de l'asso et le cqfd">
+      <change afterPath="$PROJECT_DIR$/Views/StepOneComposeRecipeView.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Analyse/Note_divers/Bugs_à_corriger.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Analyse/Note_divers/Bugs_à_corriger.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/AdminManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/AdminManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Manager.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Manager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/MemberManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/MemberManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/PostManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/PostManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/RecipeManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/RecipeManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/UserManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Route/Route.php" beforeDir="false" afterPath="$PROJECT_DIR$/Route/Route.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/AdminView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/AdminView.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/ComposeRecipeView.php" beforeDir="false" />
@@ -71,21 +79,22 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\Avanza\App\Views" />
-      <recent name="C:\wamp64\www\Avanza\App" />
-      <recent name="C:\wamp64\www\Avanza\App\Model\Member" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\Avanza\App\Views" />
       <recent name="C:\wamp64\www\Avanza\App\Model" />
       <recent name="C:\wamp64\www\Avanza\App\Model\DB" />
       <recent name="C:\wamp64\www\Avanza\App\Model\User" />
       <recent name="C:\wamp64\www\Avanza\App\Model\Admin" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\Avanza\App\Views" />
+      <recent name="C:\wamp64\www\Avanza\App" />
+      <recent name="C:\wamp64\www\Avanza\App\Model\Member" />
     </key>
   </component>
   <component name="RunManager" selected="PHP Script.UserManager.php">
@@ -151,6 +160,7 @@
       <workItem from="1606478868173" duration="33756000" />
       <workItem from="1607010515262" duration="596000" />
       <workItem from="1607873877484" duration="2195000" />
+      <workItem from="1607948396654" duration="27003000" />
     </task>
     <task id="LOCAL-00001" summary="Beginning of the Avanza project">
       <created>1603816568975</created>
@@ -212,6 +222,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Ajout des icone anvec les liens de redirection vers les comptes FB, insta de l'asso et le cqfd" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="267" y="24" key="#Inspections" timestamp="1607985175068">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="267" y="24" key="#Inspections/0.0.1280.689@0.0.1280.689" timestamp="1607985175068" />
     <state x="393" y="165" key="#Notifications" timestamp="1603826312675">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -224,10 +238,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.689@0.0.1280.689" timestamp="1603909928477" />
-    <state x="446" y="61" key="#com.intellij.ide.util.MemberChooser" timestamp="1606662730676">
+    <state x="446" y="61" key="#com.intellij.ide.util.MemberChooser" timestamp="1607984385808">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="446" y="61" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" timestamp="1606662730676" />
+    <state x="446" y="61" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" timestamp="1607984385808" />
     <state x="106" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605268809360">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -236,6 +250,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="371" y="92" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.689@0.0.1280.689" timestamp="1607876533011" />
+    <state x="385" y="180" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1607954402713">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="385" y="180" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.689@0.0.1280.689" timestamp="1607954402713" />
     <state width="1237" height="160" key="GridCell.Tab.0.bottom" timestamp="1605287329423">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -252,14 +270,14 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state width="1237" height="160" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1605287329423" />
-    <state x="221" y="80" key="IDE.errors.dialog" timestamp="1606657094595">
+    <state x="221" y="80" key="IDE.errors.dialog" timestamp="1607985177854">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="221" y="80" key="IDE.errors.dialog/0.0.1280.689@0.0.1280.689" timestamp="1606657094595" />
-    <state x="465" y="52" key="NewPhpClassDialog" timestamp="1606068105878">
+    <state x="221" y="80" key="IDE.errors.dialog/0.0.1280.689@0.0.1280.689" timestamp="1607985177854" />
+    <state x="465" y="52" key="NewPhpClassDialog" timestamp="1607974548277">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="465" y="52" key="NewPhpClassDialog/0.0.1280.689@0.0.1280.689" timestamp="1606068105878" />
+    <state x="465" y="52" key="NewPhpClassDialog/0.0.1280.689@0.0.1280.689" timestamp="1607974548277" />
     <state x="477" y="265" key="NewPhpFileDialog" timestamp="1606646811074">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -280,10 +298,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="274" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.689@0.0.1280.689" timestamp="1604857387599" />
-    <state x="297" y="153" key="run.anything.popup" timestamp="1606664301142">
+    <state x="297" y="153" key="run.anything.popup" timestamp="1607984856536">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="297" y="153" key="run.anything.popup/0.0.1280.689@0.0.1280.689" timestamp="1606664301142" />
+    <state x="297" y="153" key="run.anything.popup/0.0.1280.689@0.0.1280.689" timestamp="1607984856536" />
     <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1605298855751">
       <screen x="0" y="0" width="1280" height="689" />
     </state>

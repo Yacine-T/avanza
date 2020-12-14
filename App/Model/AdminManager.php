@@ -5,7 +5,7 @@ require_once("Model/UserManager.php");
 class AdminManager extends UserManager
 {
     public function addAdmin() {
-        $id = $this->getLastUserById();
+        $id = $this->getLastUserId();
         $column = ["user"];
         $this->insert("admins", $column, $id);
     }
