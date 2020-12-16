@@ -1,5 +1,5 @@
 Bug à corriger : Notice: Array to string conversion in C:\wamp64\www\Avanza\App\Model\Manager.php on line 53
-Lors de la redirection vers la page d'accueil après s'être inscris
+Lors de la redirection vers la page d'accueil après s'être inscris fait
 
 Vérification de l'extension des fichiers pour chacun des uploader pour savoir si le fichier uploader est bien
 une image
@@ -13,8 +13,15 @@ Rajouter une page Recap pour les articles que l'on veut rédiger
 Créer un controller ArticleController pour plus de modularité et le faire hérité de PostController pour qu'il est des
 opération propre aux article et que l'architecture soit plus propre
 
-pouvoir composer une recette erreur : 
+pouvoir composer une recette erreur : fait
 Fatal error: Uncaught Error: 
 Call to a member function createPost() on null in C:\wamp64\www\Avanza\App\Controller\PostController.php:22 Stack trace: #0 C:\wamp64\www\Avanza\App\Controller\RecipeController.php(22): 
 PostController->writePost('1', 'Lorem ipsum', ' Le lore...', 'photo_de_profil...') #1 C:\wamp64\www\Avanza\App\Route\Route.php(123): 
-RecipeController->composeRecipe('1', 'Lorem ipsum', ' Le lore...', 'photo_de_profil...', '5', '30', 'Expert') #2 C:\wamp64\www\Avanza\App\index.php(11): Route->route() #3 {main} thrown in C:\wamp64\www\Avanza\App\Controller\PostController.php on line 22
+RecipeController->composeRecipe('1', 'Lorem ipsum', ' Le lore...', 'photo_de_profil...', '5', '30', 'Expert') #2 C:\wamp64\www\Avanza\App\index.php(11): 
+Route->route() #3 {main} thrown in C:\wamp64\www\Avanza\App\Controller\PostController.php on line 22
+
+Rajouter les ingrédients et les ustensils
+
+Rajouter un recap pour avoir un apercu pour les articles
+
+Déplacer les commande require_once dans les controller

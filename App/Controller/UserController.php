@@ -69,8 +69,7 @@ class UserController
 
     public function createAccount($name, $firstname, $profilePicture, $phone, $email, $password, $passwordConfirmation, $payment)
     {
-        $userData = $this->_userManager->getUsersDatasByEmail($email);
-        $emailVerify = $this->_userManager->email_verify($email);
+       $emailVerify = $this->_userManager->email_verify($email);
         if ($emailVerify['nbUsers'] == 0) {
             if (preg_match("/^0[1-9]([0-9]{2}){4}$/", $phone)) {
                 if (preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@\/+=!?&*#<>_]).{8,}$/", $password)) {

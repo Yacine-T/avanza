@@ -3,14 +3,23 @@
 
 class RecipeManager extends PostManager
 {
+
+    /**
+     * RecipeManager constructor.
+     */
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
     public function selectAllRecipe(){}
     public function selectOneRecipe($id){}
-    public function insertRecipe($author, $nbGuest, $preparationTime, $difficulty) {
-        $post = $this->selectLastPost();
-        $columns = ["`post`", "`author`", "`title`", "`content`", "`image`"];
-        $values = ["'$post'" ,"'$author'", "'$nbGuest'", "'$preparationTime'", "'$difficulty'"];
+    public function insertRecipe($post, $nbGuest, $preparationTime, $difficulty) {
 
-        $this->insert("posts", $columns, $values);
+        $columns = ["`post`", "`nb_guest`", "`preparation_time`", "`difficulty`"];
+        $values = ["'$post'", "'$nbGuest'", "'$preparationTime'", "'$difficulty'"];
+
+        $this->insert("recipes", $columns, $values);
     }
     public function deleteRecipe($id){}
     public function updateRecipe($id){}

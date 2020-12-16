@@ -36,9 +36,9 @@
                     <br>
                 <p>Comment souhaitez-vous régler vos frais d'adhésion ? </p>
                 <label for="payment">En ligne</label>
-                <input type="radio" id="payment" name="payment" value="En ligne" required>
+                <input type="radio" id="payment" name="payment" value="online" required>
                 <label for="payment">Sur place</label>
-                <input type="radio" id=payment" name="payment" value="Sur place" required>
+                <input type="radio" id=payment" name="payment" value="onsite" required>
                     <br>
                     <br>
                 <input type="submit" value="s'inscrire">

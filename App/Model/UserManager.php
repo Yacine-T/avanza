@@ -9,6 +9,7 @@ class UserManager extends Manager
     {
         $columns = ["name", "firstname", "profile_picture", "phone", "email", "password", "payment_method"];
         $values = ["'$name'", "'$firstname'", "'$profilePicture'", "'$phone'", "'$email'", "'$password'", "'$payment'"];
+
         $this->insert("users", $columns, $values);
     }
 

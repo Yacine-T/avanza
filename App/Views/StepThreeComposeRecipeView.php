@@ -24,7 +24,7 @@
         <img src="Public/Images/plus.png" alt="ajouter une autre étape" style="width: 30px;height:"30px;" >
         <br>
         <br>
-        <input type="submit" value="Envoyer">
+        <input type="submit" value="Suivant">
     </form>
 
     <br>

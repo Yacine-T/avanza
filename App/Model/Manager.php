@@ -4,6 +4,14 @@ require_once ("Database.php");
 
 class Manager
 {
+
+    /**
+     * Manager constructor.
+     */
+    public function __construct()
+    {
+    }
+
     public function request($sql, $param = null) {
         if ($param == null) {
             $query = Database::getInstance()->getDb()->query($sql);
@@ -51,7 +59,7 @@ class Manager
             $sql = "INSERT INTO " . $table .
                     " (" . implode(',' , $columns) . " ) 
                     VALUES (" . implode(',' , $values) . ")";
-            echo $sql;
+            $this->request($sql);
     }
 
 

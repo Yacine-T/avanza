@@ -121,6 +121,7 @@ class Route
                                         $_SESSION['recipe']['nbGuest'],
                                         $_SESSION['recipe']['prepTime'],
                                         $_SESSION['recipe']['difficulty']);
+                                    header("Location: index.php");
                                 } else {
                                     require_once("Views/StepOneComposeRecipeView.php");
                                 }
@@ -153,11 +154,9 @@ class Route
                     if ($_SESSION['status'] == "admin") {
                         require_once("Views/AdminView.php");
                         $_SESSION['status'] = "admin";
-                        exit();
                     } else {
                         require_once("Views/MemberView.php");
                         $_SESSION['status'] = "member";
-                        exit();
                     }
                 } elseif ($_GET['action'] == "signup") {
                     if (isset(
@@ -167,7 +166,8 @@ class Route
                         $_POST['phone'],
                         $_POST['email'],
                         $_POST['password'],
-                        $_POST['passwordConfirmation'], $_POST['payment'])) {
+                        $_POST['passwordConfirmation'],
+                        $_POST['payment'])) {
                         if ($_POST['payment'] == "online") {
                             $this->_userController->createAccount(
                                 $_POST['name'],
@@ -186,8 +186,9 @@ class Route
                                 $_POST['phone'],
                                 $_POST['email'],
                                 $_POST['password'],
-                                $_POST['passwordConfirmation'], $_POST['payment']);
-                            require_once("Views/HomeView.php");
+                                $_POST['passwordConfirmation'],
+                                $_POST['payment']);
+                            header("Location:index.php");
                         } else {
                             require_once("Views/JoinView.php");
                         }

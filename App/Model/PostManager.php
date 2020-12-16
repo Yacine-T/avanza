@@ -1,9 +1,15 @@
 <?php
 
-require_once ("Model/Manager.php");
 
 class PostManager extends Manager
 {
+    /**
+     * PostManager constructor.
+     */
+    public function __construct()
+    {
+        parent::__construct();
+    }
 
     public function selectAllPosts() {
         $sql = "SELECT * FROM posts";
@@ -16,8 +22,10 @@ class PostManager extends Manager
     }
 
     public function selectLastPost(){
-        $sql = "SELECT id FROM `posts` ORDER BY DESC LIMIT 1";
-        return $this->queryAll($sql);
+        $sql = "SELECT id FROM `posts` ORDER BY id DESC LIMIT 1";
+        $lastPost = $this->queryRow($sql);
+
+        return $lastPost;
     }
 
     public function createPost($author, $title, $content, $image) {
@@ -28,10 +36,10 @@ class PostManager extends Manager
             $this->insert("posts", $columns, $values);
     }
 
-    public function updatePost($id, $author, $title, $theme, $content, $mainImage, $imageC1, $imageC2)
+    public function updatePost($id, $author, $title, $theme, $content, $image)
     {
         $table = "posts";
-        $data = ["`author` = " . "'$author'" , "`title` = " . "'$title'", "`theme` = " . "'$theme'", "`content` = " . "'$content'","`main_image` = " . "'$mainImage'", "`image_c1` = " . "'$imageC1'", "`image_c2` = " . "'$imageC2'"];
+        $data = ["`author` = " . "'$author'" , "`title` = " . "'$title'", "`theme` = " . "'$theme'", "`content` = " . "'$content'","`main_image` = " . "'$image'"];
         $conditions = ["`ìd` = " . $id];
         $this->update($table, $data, $conditions);
     }
