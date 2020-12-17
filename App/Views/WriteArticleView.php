@@ -19,12 +19,12 @@
         <br>
     </header>
 
-    <form action="index.php?action=post&post=article&step=two" method="post">
+    <form action="index.php?action=post&post=article&step=recap" method="post">
 
         <input type="text" placeholder="Titre" id="title" name="title" required>
         <br>
         <br>
-        <select id="topic" name="topics[]" placeholder="Thématique" multiple="multiple" required>
+        <select id="topic" name="topics[]" placeholder="Thématique" multiple required>
             <option value="Science">Science</option>
             <option value="Environnement">Environnement</option>
             <option value="Bien-être">Bien-être</option>
@@ -43,7 +43,7 @@
         <input type="file" placeholder="Uploder une image" id="image" name="image" required>
         <br>
         <br>
-        <input type="submit" value="Envoyer">
+        <input type="submit" value="Suivant">
     </form>
     <br>
 

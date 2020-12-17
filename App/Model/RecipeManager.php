@@ -1,5 +1,6 @@
 <?php
 
+require_once("Model/PostManager.php");
 
 class RecipeManager extends PostManager
 {
@@ -12,8 +13,6 @@ class RecipeManager extends PostManager
         parent::__construct();
     }
 
-    public function selectAllRecipe(){}
-    public function selectOneRecipe($id){}
     public function insertRecipe($post, $nbGuest, $preparationTime, $difficulty) {
 
         $columns = ["`post`", "`nb_guest`", "`preparation_time`", "`difficulty`"];
@@ -21,7 +20,6 @@ class RecipeManager extends PostManager
 
         $this->insert("recipes", $columns, $values);
     }
-    public function deleteRecipe($id){}
-    public function updateRecipe($id){}
+
 
 }

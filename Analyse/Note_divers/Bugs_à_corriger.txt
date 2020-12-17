@@ -1,17 +1,17 @@
-Bug à corriger : Notice: Array to string conversion in C:\wamp64\www\Avanza\App\Model\Manager.php on line 53
+wBug à corriger : Notice: Array to string conversion in C:\wamp64\www\Avanza\App\Model\Manager.php on line 53
 Lors de la redirection vers la page d'accueil après s'être inscris fait
 
 Vérification de l'extension des fichiers pour chacun des uploader pour savoir si le fichier uploader est bien
-une image
+une image fait
 
-Créé une table theme qui pour un article fait correspondre au moins un theme. Cette table sera lié au champs
-Article et non à la table post adapter la route en fonction de cela
+Créé une table theme qui pour un article fait correspondre au moins un theme. Cette table sera lié à la 
+table article et non à la table post adapter la route en fonction de cela fait
 Ex : un artcile sur le ewaste peut être associé au theme de la science, de l'écologie et de la technologie
 
-Rajouter une page Recap pour les articles que l'on veut rédiger
+Rajouter une page Recap pour les articles que l'on veut rédiger fait
 
 Créer un controller ArticleController pour plus de modularité et le faire hérité de PostController pour qu'il est des
-opération propre aux article et que l'architecture soit plus propre
+opération propre aux article et que l'architecture soit plus propre fait
 
 pouvoir composer une recette erreur : fait
 Fatal error: Uncaught Error: 
@@ -22,6 +22,4 @@ Route->route() #3 {main} thrown in C:\wamp64\www\Avanza\App\Controller\PostContr
 
 Rajouter les ingrédients et les ustensils
 
-Rajouter un recap pour avoir un apercu pour les articles
-
-Déplacer les commande require_once dans les controller
+Déplacer les commande require_once et header dans les controller

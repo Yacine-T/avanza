@@ -15,12 +15,18 @@ class PostController
         $this->postManager = new PostManager();
     }
 
-
-    public function showAllPosts() {}
-    public function showOnePosts($id) {}
     public function writePost($author, $title, $content, $image) {
-        $this->postManager->createPost($author, $title, $content, $image);
+        $pathinfo = pathinfo($image);
+        if ($pathinfo['extension'] == "jpg" ||
+            $pathinfo['extension'] == "png" ||
+            $pathinfo['extension'] == "svg" ||
+            $pathinfo['extension'] == "jpeg" ||
+            $pathinfo['extension'] == "xcf" ||
+            $pathinfo['extension'] == "bmp") {
+            $this->postManager->createPost($author, $title, $content, $image);
+        } else {
+            echo "Veuillez télécharger une image (seules les extensions '.jpg' sont autorisées)";
+        }
     }
-    public function editPost($id, $author, $title, $theme, $content, $mainImage, $imageC1, $imageC2){} // for the admins only
-    public function removePost($id){} // for the admins only
+
 }

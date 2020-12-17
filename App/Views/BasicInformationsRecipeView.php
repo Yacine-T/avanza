@@ -21,7 +21,7 @@
         <input type="text" placeholder="Intitulé de la recette" id="title" name="title" required>
         <br>
         <br>
-        <textarea id="description" name="description" placeholder="Quelques lignes sur votre recette" cols="100" rows="10" required>
+        <textarea id="description" name="description" placeholder="Décrivez brièvement votre recette" cols="100" rows="10" required>
         </textarea>
         <br>
         <br>

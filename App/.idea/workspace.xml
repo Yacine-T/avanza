@@ -25,16 +25,27 @@
     <list default="true" id="acb843b5-2923-41db-bc3d-a77267ea2dec" name="Default Changelist" comment="Ajout des icone anvec les liens de redirection vers les comptes FB, insta de l'asso et le cqfd">
       <change beforePath="$PROJECT_DIR$/../Analyse/Note_divers/Bugs_à_corriger.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Analyse/Note_divers/Bugs_à_corriger.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/PostController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controller/RecipeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/RecipeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/AdminManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/AdminManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/ArticleManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/ArticleManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/EventManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/EventManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/Manager.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Manager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/MemberManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/MemberManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/OtherManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/OtherManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/PostManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/PostManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/PresentationManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/PresentationManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/RecipeManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/RecipeManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/UserManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/WorkshopManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/WorkshopManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Route/Route.php" beforeDir="false" afterPath="$PROJECT_DIR$/Route/Route.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/JoinView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/JoinView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/StepThreeComposeRecipeView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/StepThreeComposeRecipeView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/StepFiveComposeRecipeView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/RecapRecipeView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/StepFourComposeRecipeView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/PreparationRecipeView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/StepOneComposeRecipeView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/BasicInformationsRecipeView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/StepThreeComposeRecipeView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/UstensilsRecipeView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/StepTwoComposeRecipeView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/IngredientRecipeView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/WriteArticleView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/WriteArticleView.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,17 +91,17 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\Avanza\App\Views" />
+      <recent name="C:\wamp64\www\Avanza\App" />
+      <recent name="C:\wamp64\www\Avanza\App\Model\Member" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\Avanza\App\Views" />
       <recent name="C:\wamp64\www\Avanza\App\Model" />
       <recent name="C:\wamp64\www\Avanza\App\Model\DB" />
       <recent name="C:\wamp64\www\Avanza\App\Model\User" />
       <recent name="C:\wamp64\www\Avanza\App\Model\Admin" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\Avanza\App\Views" />
-      <recent name="C:\wamp64\www\Avanza\App" />
-      <recent name="C:\wamp64\www\Avanza\App\Model\Member" />
     </key>
   </component>
   <component name="RunManager" selected="PHP Script.UserManager.php">
@@ -159,7 +170,8 @@
       <workItem from="1607948396654" duration="27768000" />
       <workItem from="1608038073337" duration="207000" />
       <workItem from="1608038337449" duration="2447000" />
-      <workItem from="1608111401364" duration="9237000" />
+      <workItem from="1608111401364" duration="9853000" />
+      <workItem from="1608206931138" duration="20880000" />
     </task>
     <task id="LOCAL-00001" summary="Beginning of the Avanza project">
       <created>1603816568975</created>

@@ -12,6 +12,7 @@ class RecipeController extends PostController
     /**
      * RecipeController constructor.
      * @param $_recipeManager
+     * @param $_postManager
      */
     public function __construct()
     {
@@ -21,15 +22,41 @@ class RecipeController extends PostController
     }
 
 
-    public function showAllRecipes() {}
-    public function showOneRecipes($id) {}
-    public function composeRecipe($author, $title, $description, $image, $nbGuest, $preparationTime, $difficulty) {
-        $post = $this->_postManager->selectLastPost();
-        $this->writePost($author, $title, $description, $image);
-        $this->_recipeManager->insertRecipe($post['id'], $nbGuest ,$preparationTime, $difficulty);
+    public function showAllRecipes()
+    {
     }
-    public function removeOneRecipe($id) {}
-    public function editRecipe() {}
+
+    public function showOneRecipes($id)
+    {
+    }
+
+    public function composeRecipe($author, $title, $description, $image, $nbGuest, $preparationTime, $difficulty)
+    {
+        $pathinfo = pathinfo($image);
+        if ($pathinfo['extension'] == "jpg" ||
+            $pathinfo['extension'] == "png" ||
+            $pathinfo['extension'] == "svg" ||
+            $pathinfo['extension'] == "jpeg" ||
+            $pathinfo['extension'] == "xcf" ||
+            $pathinfo['extension'] == "bmp") {
+
+            $post = $this->_postManager->selectLastPost();
+            $this->writePost($author, $title, $description, $image);
+            $this->_recipeManager->insertRecipe($post['id'], $nbGuest, $preparationTime, $difficulty);
+
+        } else {
+            echo "Veuillez télécharger une image (seules les extensions '.jpg' sont autorisées)";
+        }
+
+    }
+
+    public function removeOneRecipe($id)
+    {
+    }
+
+    public function editRecipe()
+    {
+    }
 
 
 }

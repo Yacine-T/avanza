@@ -1,25 +1,25 @@
 <?php
 
 require_once("Controller/UserController.php");
-require_once("Controller/PostController.php");
+require_once("Controller/ArticleController.php");
 require_once("Controller/RecipeController.php");
 
 class Route
 {
     private $_userController;
-    private $_postController;
+    private $_articleController;
     private $_recipeController;
 
     /**
      * Route constructor.
      * @param  $_userController
-     * @param  $_postController
+     * @param  $_articleController
      * @param  $_recipeController
      */
     public function __construct()
     {
         $this->_userController = new UserController();
-        $this->_postController = new PostController();
+        $this->_articleController = new ArticleController();
         $this->_recipeController = new RecipeController();
     }
 
@@ -58,31 +58,50 @@ class Route
                 } elseif ($_GET["action"] == "post") {
                     if (isset($_GET["post"])) {
                         if ($_GET["post"] == "article") {
-                            if (isset($_GET['edit']) && $_GET['edit'] == true) {
-                                if(isset(
-                                    $_POST['title'],
-                                    $_POST['topics'],
-                                    $_POST['content'],
-                                    $_POST['image']))
-                                {
-                                    $topics = implode(",", $_POST['topics']);
-                                    $this->_postController->writePost(
-                                        $_SESSION['id'],
-                                        $_POST['title'],
-                                        $_POST['content'],
-                                        $_POST['image']);
-                                    header("Location:index.php");
-                                } else {
+                                if (isset($_GET['step'])) {
+                                     if ($_GET['step'] == 'edit')   {
+                                         if (isset(
+                                                 $_SESSION['id'],
+                                                 $_SESSION['article']['title'],
+                                                 $_SESSION['article']['content'],
+                                                 $_SESSION['article']['image'])) {
+
+                                            $this->_articleController->createArticle(
+                                                 $_SESSION['id'],
+                                                 $_SESSION['article']['title'],
+                                                 $_SESSION['article']['content'],
+                                                 $_SESSION['article']['image']);
+                                             //header("Location:index.php");
+                                         } else {
+                                             require_once("Views/WriteArticleView.php");
+                                         }
+                                    } elseif ($_GET['step'] == 'recap') {
+                                         if (isset(
+                                             $_POST['title'],
+                                             $_POST['topics'],
+                                             $_POST['content'],
+                                             $_POST['image'])) {
+                                             $_SESSION['article']['author'] = $_SESSION['name'] . ' ' . $_SESSION['firstname'];
+                                             $_SESSION['article']['title'] = $_POST['title'];
+                                             $_SESSION['article']['topics'] = implode(',', (array)$_POST['topics']);
+                                             $_SESSION['article']['content'] = $_POST['content'];
+                                             $_SESSION['article']['image'] = $_POST['image'];
+                                             require_once("Views/RecapArticleView.php");
+                                         } else {
+                                             require_once("Views/WriteArticleView.php");
+                                         }
+
+                                     } else {
+                                         require_once("Views/WriteArticleView.php");
+                                    }
+                                }  else {
                                     require_once("Views/WriteArticleView.php");
                                 }
-                            } else {
-                                require_once("Views/WriteArticleView.php");
-                            }
 
                         } elseif ($_GET["post"] == "recipe") {
                             if (isset($_GET["step"])) {
                                 if ($_GET["step"] == "one") {
-                                    require_once("Views/StepOneComposeRecipeView.php");
+                                    require_once("Views/BasicInformationsRecipeView.php");
                                 } elseif ($_GET["step"] == "two" && isset(
                                         $_POST['title'],
                                         $_POST['description'],
@@ -98,21 +117,21 @@ class Route
                                     $_SESSION['recipe']['nbGuest'] = $_POST['nbGuest'];
                                     $_SESSION['recipe']['prepTime'] = $_POST['prepTime'];
                                     $_SESSION['recipe']['difficulty'] = $_POST['difficulty'];
-                                    require_once("Views/StepTwoComposeRecipeView.php");
+                                    require_once("Views/IngredientRecipeView.php");
                                 } elseif ($_GET["step"] == "three" && isset($_POST['firstIngredient'])) {
                                     $_SESSION['recipe']['ingredient'] = $_POST['firstIngredient'];
-                                    require_once("Views/StepThreeComposeRecipeView.php");
+                                    require_once("Views/UstensilsRecipeView.php");
                                 } elseif ($_GET["step"] == "four" && isset($_POST['firstUstensils'])) {
                                     $_SESSION['recipe']['ustensils'] = $_POST['firstUstensils'];
-                                        require_once ("Views/StepFourComposeRecipeView.php");
-                                } elseif ($_GET["step"] == "five"){
+                                    require_once("Views/PreparationRecipeView.php");
+                                } elseif ($_GET["step"] == "five") {
                                     if (isset($_POST['firstStep'])) {
                                         $_SESSION['recipe']['steps'] = $_POST['firstStep'];
-                                        require_once ("Views/StepFiveComposeRecipeView.php");
+                                        require_once("Views/RecapRecipeView.php");
                                     } else {
-                                        require_once ("Views/StepFourComposeRecipeView.php");
+                                        require_once("Views/PreparationRecipeView.php");
                                     }
-                                } elseif (isset($_GET['step']) == "six"){
+                                } elseif (isset($_GET['step']) == "six") {
                                     $this->_recipeController->composeRecipe(
                                         $_SESSION['recipe']['authorId'],
                                         $_SESSION['recipe']['title'],
@@ -123,12 +142,12 @@ class Route
                                         $_SESSION['recipe']['difficulty']);
                                     header("Location: index.php");
                                 } else {
-                                    require_once("Views/StepOneComposeRecipeView.php");
+                                    require_once("Views/BasicInformationsRecipeView.php");
                                 }
                             } else {
                                 require_once("Views/MemberView.php");
                             }
-                        } else{
+                        } else {
                             require_once("Views/MemberView.php");
                         }
 

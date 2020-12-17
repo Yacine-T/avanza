@@ -1,9 +1,16 @@
 <?php
 
-require_once("Manager.php");
+require_once("Model/Manager.php");
 
 class UserManager extends Manager
 {
+    /**
+     * UserManager constructor.
+     */
+    public function __construct()
+    {
+        parent::__construct();
+    }
 
     public function addUser($name, $firstname, $profilePicture, $phone, $email, $password, $payment)
     {
