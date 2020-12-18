@@ -17,7 +17,7 @@ class UserManager extends Manager
         $columns = ["name", "firstname", "profile_picture", "phone", "email", "password", "payment_method"];
         $values = ["'$name'", "'$firstname'", "'$profilePicture'", "'$phone'", "'$email'", "'$password'", "'$payment'"];
 
-        $this->insert("users", $columns, $values);
+        parent::insert("users", $columns, $values);
     }
 
     public function getLastUserId()
@@ -47,7 +47,7 @@ class UserManager extends Manager
     public function updateUser($id, $name, $firstname, $profilePicture, $phone, $email, $password) {
         $data = ["`name` = " . "'$name'", "`firstname` = " . "'$firstname'", "`profile_picture` = " . "'$profilePicture'", "`phone` = " . "'$phone'", "`email` = " . "'$email'", "`password` = " . "'$password'"];
         $conditions = ["`id` = " . "$id"];
-        $this->update("`users`", $data, $conditions);
+        parent::update("`users`", $data, $conditions);
     }
 
     public function removeUser($id) {

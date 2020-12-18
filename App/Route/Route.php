@@ -2,25 +2,41 @@
 
 require_once("Controller/UserController.php");
 require_once("Controller/ArticleController.php");
+require_once("Controller/ArticleThemeController.php");
 require_once("Controller/RecipeController.php");
+require_once("Controller/IngredientController.php");
+require_once("Controller/UstensilController.php");
+require_once("Controller/PrepationController.php");
 
 class Route
 {
     private $_userController;
     private $_articleController;
+    private $_articleThemeController;
     private $_recipeController;
+    private $_ingredientController;
+    private $_ustensilController;
+    private $_preparationController;
 
     /**
      * Route constructor.
      * @param  $_userController
      * @param  $_articleController
+     * @param  $_articleThemeController
      * @param  $_recipeController
+     * @param  $_ingredientController
+     * @param  $_ustensilController
+     * @param  $_preparationController
      */
     public function __construct()
     {
         $this->_userController = new UserController();
         $this->_articleController = new ArticleController();
+        $this->_articleThemeController = new ArticleThemeController();
         $this->_recipeController = new RecipeController();
+        $this->_ingredientController = new IngredientController();
+        $this->_ustensilController = new UstensilController();
+        $this->_preparationController = new PrepationController();
     }
 
     public function route()
@@ -71,7 +87,8 @@ class Route
                                                  $_SESSION['article']['title'],
                                                  $_SESSION['article']['content'],
                                                  $_SESSION['article']['image']);
-                                             //header("Location:index.php");
+                                            $this->_articleThemeController->createArticleTheme(explode(',', $_SESSION['article']['topics']));
+                                             header("Location:index.php");
                                          } else {
                                              require_once("Views/WriteArticleView.php");
                                          }
@@ -105,24 +122,38 @@ class Route
                                 } elseif ($_GET["step"] == "two" && isset(
                                         $_POST['title'],
                                         $_POST['description'],
-                                        $_POST['image'],
+                                        $_POST['recipeImage'],
                                         $_POST['nbGuest'],
                                         $_POST['prepTime'],
-                                        $_POST['difficulty'])) {
+                                        $_POST['difficulty']
+                                        )) {
                                     $_SESSION['recipe']['author'] = $_SESSION['name'] . " " . $_SESSION['firstname'];
                                     $_SESSION['recipe']['authorId'] = $_SESSION['id'];
                                     $_SESSION['recipe']['title'] = $_POST['title'];
                                     $_SESSION['recipe']['description'] = $_POST['description'];
-                                    $_SESSION['recipe']['image'] = $_POST['image'];
+                                    $_SESSION['recipe']['recipeImage'] = $_POST['recipeImage'];
                                     $_SESSION['recipe']['nbGuest'] = $_POST['nbGuest'];
                                     $_SESSION['recipe']['prepTime'] = $_POST['prepTime'];
                                     $_SESSION['recipe']['difficulty'] = $_POST['difficulty'];
                                     require_once("Views/IngredientRecipeView.php");
-                                } elseif ($_GET["step"] == "three" && isset($_POST['firstIngredient'])) {
+                                } elseif ($_GET["step"] == "three" && isset(
+                                        $_POST['firstIngredient'],
+                                        $_POST['quantity'],
+                                        $_POST['measureUnit'],
+                                        $_POST['ingredientImage']
+                                    )) {
                                     $_SESSION['recipe']['ingredient'] = $_POST['firstIngredient'];
+                                    $_SESSION['recipe']['quantity'] = $_POST['quantity'];
+                                    $_SESSION['recipe']['measureUnit'] = $_POST['measureUnit'];
+                                    $_SESSION['recipe']['ingredientImage'] = $_POST['ingredientImage'];
                                     require_once("Views/UstensilsRecipeView.php");
-                                } elseif ($_GET["step"] == "four" && isset($_POST['firstUstensils'])) {
+                                } elseif ($_GET["step"] == "four" && isset(
+                                    $_POST['firstUstensils'],
+                                    $_POST['quantity'],
+                                    $_POST['ustensilImage'])) {
                                     $_SESSION['recipe']['ustensils'] = $_POST['firstUstensils'];
+                                    $_SESSION['recipe']['quantityUstensils'] = $_POST['quantity'];
+                                    $_SESSION['recipe']['ustensilImage'] = $_POST['ustensilImage'];
                                     require_once("Views/PreparationRecipeView.php");
                                 } elseif ($_GET["step"] == "five") {
                                     if (isset($_POST['firstStep'])) {
@@ -131,16 +162,49 @@ class Route
                                     } else {
                                         require_once("Views/PreparationRecipeView.php");
                                     }
-                                } elseif (isset($_GET['step']) == "six") {
-                                    $this->_recipeController->composeRecipe(
+                                } elseif (isset($_GET['step']) && $_GET['step'] == "six") {
+                                    if (isset(
                                         $_SESSION['recipe']['authorId'],
                                         $_SESSION['recipe']['title'],
                                         $_SESSION['recipe']['description'],
-                                        $_SESSION['recipe']['image'],
+                                        $_SESSION['recipe']['recipeImage'],
                                         $_SESSION['recipe']['nbGuest'],
                                         $_SESSION['recipe']['prepTime'],
-                                        $_SESSION['recipe']['difficulty']);
-                                    header("Location: index.php");
+                                        $_SESSION['recipe']['difficulty'],
+                                        $_SESSION['recipe']['ingredient'],
+                                        $_SESSION['recipe']['quantity'],
+                                        $_SESSION['recipe']['measureUnit'],
+                                        $_SESSION['recipe']['ingredientImage'],
+                                        $_SESSION['recipe']['ustensils'],
+                                        $_SESSION['recipe']['quantityUstensils'],
+                                        $_SESSION['recipe']['ustensilImage']
+                                    )) {
+                                        $this->_recipeController->composeRecipe(
+                                            $_SESSION['recipe']['authorId'],
+                                            $_SESSION['recipe']['title'],
+                                            $_SESSION['recipe']['description'],
+                                            $_SESSION['recipe']['recipeImage'],
+                                            $_SESSION['recipe']['nbGuest'],
+                                            $_SESSION['recipe']['prepTime'],
+                                            $_SESSION['recipe']['difficulty'],
+                                        );
+                                        $this->_ingredientController->createIngredient(
+                                            (array) $_SESSION['recipe']['ingredient'],
+                                            $_SESSION['recipe']['measureUnit'],
+                                            $_SESSION['recipe']['ingredientImage'],
+                                            $_SESSION['recipe']['quantity']
+                                        );
+                                        $this->_ustensilController->createUstensil(
+                                            (array) $_SESSION['recipe']['ustensils'],
+                                            $_SESSION['recipe']['ustensilImage'],
+                                            $_SESSION['recipe']['quantityUstensils']
+                                        );
+                                        $this->_preparationController->createPreparationStep((array)$_SESSION['recipe']['steps']);
+                                        header("Location: index.php");
+                                    } else {
+                                        header("Location:index.php?action=post&post=recipe&step=five");
+                                    }
+
                                 } else {
                                     require_once("Views/BasicInformationsRecipeView.php");
                                 }

@@ -25,7 +25,7 @@
         </textarea>
         <br>
         <br>
-        <input type="file" id="image" name="image" required>
+        <input type="file" id="recipeImage" name="recipeImage" required>
         <br>
         <br>
         <input type="number" id="nbGuest" name="nbGuest" placeholder="nombre d'invités" step="1" style="width: 17%;" required>

@@ -18,7 +18,13 @@
 
     <form action="index.php?action=post&post=recipe&step=four" method="post">
 
-        <input type="text" placeholder="Etape" id="firstUstensils" name="firstUstensils" required>
+        <input type="text" placeholder="Ustensils" id="firstUstensils" name="firstUstensils" required>
+        <br>
+        <br>
+        <input type="number" step="1" placeholder="nombre d'ustensils" id="quantity" name="quantity" required>
+        <br>
+        <br>
+        <input type="file" id="ustensilImage" name="ustensilImage" required>
         <br>
         <br>
         <img src="Public/Images/plus.png" alt="ajouter une autre étape" style="width: 30px;height:"30px;" >

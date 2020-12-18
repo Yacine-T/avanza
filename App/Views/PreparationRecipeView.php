@@ -16,7 +16,7 @@
         <br>
     </header>
 
-    <form action="index.php?action=post&post=recipe&step=five&edit=true" method="post">
+    <form action="index.php?action=post&post=recipe&step=five" method="post">
 
         <input type="text" placeholder="Etape" id="firstStep" name="firstStep" required>
         <br>

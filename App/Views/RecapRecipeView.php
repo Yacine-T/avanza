@@ -19,9 +19,15 @@
         <?=
             "Auteur : " . $_SESSION['recipe']['author'] . " le " . date("d/m/y") . " <br>" .
             "Intitulé : " . $_SESSION['recipe']['title'] . "<br>" .
-            "Personnes : " . $_SESSION['recipe']['nbGuest'] . " temps de préparation : " . $_SESSION['recipe']['prepTime'] .
-            " Difficulté : " . $_SESSION['recipe']['difficulty'] . "<br>" .
-            "Description : " . $_SESSION['recipe']['description'] ?> <br>
+            " Pour : " . $_SESSION['recipe']['nbGuest'] . " personnes" . "<br>" .
+            " temps de préparation : " . $_SESSION['recipe']['prepTime'] . " minutes" . "<br>" .
+            "Ingrédients : "  . $_SESSION['recipe']['quantity'] . " " . $_SESSION['recipe']['measureUnit'] . " de " . $_SESSION['recipe']['ingredient'] . " <br>" .
+            "illustration des ingédients :" . $_SESSION['recipe']['ingredientImage'] . "<br>" .
+            "Ustensile : "  . $_SESSION['recipe']['quantityUstensils'] . " " . $_SESSION['recipe']['ustensils'] . "<br>" .
+            "Illustration des ustensils :" . $_SESSION['recipe']['ustensilImage'] . " <br>" .
+            "Difficulté : " . $_SESSION['recipe']['difficulty'] . "<br>" .
+            "Description : " . $_SESSION['recipe']['description'] . "<br>" .
+            "Etape à suivre : " . $_SESSION['recipe']['steps'] ?> <br>
             <?=" image : "?>  <img src="<?= $_SESSION['recipe']['image']; ?>"> <br>
             <input type="submit" value="valider">
 

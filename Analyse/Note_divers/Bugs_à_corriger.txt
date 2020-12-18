@@ -20,6 +20,6 @@ PostController->writePost('1', 'Lorem ipsum', ' Le lore...', 'photo_de_profil...
 RecipeController->composeRecipe('1', 'Lorem ipsum', ' Le lore...', 'photo_de_profil...', '5', '30', 'Expert') #2 C:\wamp64\www\Avanza\App\index.php(11): 
 Route->route() #3 {main} thrown in C:\wamp64\www\Avanza\App\Controller\PostController.php on line 22
 
-Rajouter les ingrédients et les ustensils
+Rajouter les ingrédients et les ustensils fait
 
-Déplacer les commande require_once et header dans les controller
+Déplacer les commande require_once et header dans les controller en cours
